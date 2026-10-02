@@ -5,7 +5,7 @@ export function SubmissionsPage() {
   const items = [...SUBMISSIONS].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   return (
     <div className="flex-1 space-y-6 p-6">
-      <PageHeader title="My submissions" description="Everything you’ve sent. Tap one to see it in full." />
+      <PageHeader title="My submissions" description="Everything you've sent. Tap one to see it in full." />
       {items.length === 0 ? (
         <Card>
           <CardContent className="py-12 text-center type-body-small text-fg3">No submissions yet. Find a brief that fits your perspective.</CardContent>

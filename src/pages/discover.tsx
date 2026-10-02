@@ -46,12 +46,14 @@ export function DiscoverPage() {
         (!q || (c.title ?? "").toLowerCase().includes(q.toLowerCase())),
     );
     const far = Number.MAX_SAFE_INTEGER;
+    const closed = (c: (typeof items)[number]) => (c.status === "closed" || (c.deadline !== null && Date.parse(c.deadline) < Date.now()) ? 1 : 0);
     return [...items].sort((a, b) =>
-      sort === "rewardPool.desc"
+      closed(a) - closed(b) ||
+      (sort === "rewardPool.desc"
         ? (b.rewardPool ?? 0) - (a.rewardPool ?? 0)
         : sort === "createdAt.desc"
           ? b.createdAt.localeCompare(a.createdAt)
-          : (a.deadline ? Date.parse(a.deadline) : far) - (b.deadline ? Date.parse(b.deadline) : far),
+          : (a.deadline ? Date.parse(a.deadline) : far) - (b.deadline ? Date.parse(b.deadline) : far)),
     );
   }, [tier, category, status, sort, q]);
 

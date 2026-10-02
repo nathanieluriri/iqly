@@ -37,28 +37,34 @@ export const SUBMISSIONS: Submission[] = [
 export type LedgerEntry = { id: string; type: string; amount: number; createdAt: string };
 export type Withdrawal = { id: string; amount: number; status: WithdrawalStatus; createdAt: string };
 
-// Awards match the two winning submissions above (kobo).
+// Awards match the two winning submissions above and land after each brief closes (kobo).
+// Timeline: award 50,000 (13d ago) → failed 5,000 (11d) → paid out 40,000 (10d) → award 12,500 (2d) → 10,000 requested (2h).
 export const LEDGER: LedgerEntry[] = [
-  { id: "l3", type: "withdrawal", amount: -4_000_000, createdAt: at(-12) },
-  { id: "l2", type: "award", amount: 1_250_000, createdAt: at(-14) },
-  { id: "l1", type: "award", amount: 5_000_000, createdAt: at(-28) },
+  { id: "l3", type: "award", amount: 1_250_000, createdAt: at(-2) },
+  { id: "l2", type: "withdrawal", amount: -4_000_000, createdAt: at(-10) },
+  { id: "l1", type: "award", amount: 5_000_000, createdAt: at(-13) },
 ];
 
 export const WITHDRAWALS: Withdrawal[] = [
   { id: "w3", amount: 1_000_000, status: "pending", createdAt: at(0, -2) },
-  { id: "w2", amount: 4_000_000, status: "completed", createdAt: at(-12) },
-  { id: "w1", amount: 500_000, status: "failed", createdAt: at(-30) },
+  { id: "w2", amount: 4_000_000, status: "completed", createdAt: at(-10) },
+  { id: "w1", amount: 500_000, status: "failed", createdAt: at(-11) },
 ];
 
+// Names as Paystack's bank list returns them; the live app loads this list from Paystack.
 export const BANKS = [
   { value: "044", label: "Access Bank" },
-  { value: "058", label: "Guaranty Trust Bank" },
+  { value: "070", label: "Fidelity Bank" },
   { value: "011", label: "First Bank of Nigeria" },
-  { value: "033", label: "United Bank for Africa" },
-  { value: "057", label: "Zenith Bank" },
-  { value: "50515", label: "Moniepoint MFB" },
-  { value: "999992", label: "OPay" },
+  { value: "214", label: "First City Monument Bank" },
+  { value: "058", label: "Guaranty Trust Bank" },
   { value: "50211", label: "Kuda Bank" },
+  { value: "50515", label: "Moniepoint MFB" },
+  { value: "999992", label: "OPay Digital Services Limited (OPay)" },
+  { value: "999991", label: "PalmPay" },
+  { value: "033", label: "United Bank For Africa" },
+  { value: "035", label: "Wema Bank" },
+  { value: "057", label: "Zenith Bank" },
 ];
 
 export const SAVED_BANK = { bankCode: "044", bankName: "Access Bank", accountName: "ADAEZE OKAFOR", accountNumber: "0123456789" };

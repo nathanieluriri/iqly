@@ -33,7 +33,7 @@ export function WalletPage() {
   return (
     <div className="flex-1 p-6">
       <div className="mx-auto max-w-3xl space-y-6">
-        <PageHeader title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you’re ready." />
+        <PageHeader title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you're ready." />
         <BalanceCard withdrawable={totals.withdrawable} pendingWithdrawals={totals.pendingWithdrawals} totalEarned={totals.totalEarned} />
         <Tabs
           value={tab}
@@ -188,7 +188,7 @@ function BankAccount({ current, onSaved }: { current: Bank | null; onSaved: (b: 
     <Card>
       <CardHeader>
         <CardTitle>Bank account</CardTitle>
-        <CardDescription>{current ? "Replace the bank we’ll send withdrawals to." : "Add the bank we’ll send withdrawals to."}</CardDescription>
+        <CardDescription>{current ? "Replace the bank we'll send withdrawals to." : "Add the bank we'll send withdrawals to."}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {current ? <SavedBank bankName={current.bankName} accountName={current.accountName} last4={current.accountNumber.slice(-4)} /> : null}

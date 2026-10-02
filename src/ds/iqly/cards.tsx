@@ -1,4 +1,4 @@
-import { Clock, FileText, Info, Sparkles, Tag } from "lucide-react";
+import { Clock, FileText, Info, Sparkles, Tag, UserRound } from "lucide-react";
 import { cn } from "../lib/cn";
 import { deadlineLabel, formatRelative, formatReward, isDimmed } from "../lib/format";
 import { useLink } from "../lib/link";
@@ -45,7 +45,7 @@ export function ChallengeCard({ c, href }: { c: Challenge; href: string }) {
         {dimmed ? <span className="absolute top-3 left-3 rounded-full bg-brand/85 px-2.5 py-1 type-mono-pill text-sidebar-fg backdrop-blur-sm">Closed</span> : null}
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <div className="flex items-center gap-2 type-mono-card-eyebrow text-accent-strong">
+        <div className="flex min-w-0 items-center gap-2 whitespace-nowrap type-mono-card-eyebrow text-accent-strong">
           <Sparkles aria-hidden className="size-3" />
           <span>{c.tier === "advanced" ? "Advanced" : "Standard"}</span>
           {c.category ? (
@@ -54,12 +54,12 @@ export function ChallengeCard({ c, href }: { c: Challenge; href: string }) {
                 ·
               </span>
               <Tag aria-hidden className="size-3" />
-              <span>{c.category.replace("_", " ")}</span>
+              <span className="truncate">{c.category.replace("_", " ")}</span>
             </>
           ) : null}
         </div>
         <div className="mt-3 flex items-center gap-2">
-          {c.brandName ? <Avatar variant="brand" initials={c.brandName.charAt(0).toUpperCase()} /> : null}
+          {c.brandName ? <Avatar variant="brand" initials={c.brandName.charAt(0).toUpperCase()} /> : <UserRound aria-hidden className="size-4 shrink-0 text-brand-line2" />}
           <span className="truncate type-label-badge text-brand-fg2">{c.brandName ?? "Anonymous"}</span>
         </div>
         <h3 className="mt-2 line-clamp-2 type-heading-card-title text-brand">{c.title ?? "Untitled brief"}</h3>
@@ -68,7 +68,7 @@ export function ChallengeCard({ c, href }: { c: Challenge; href: string }) {
           <div>
             <div className="flex items-center gap-1 type-mono-micro text-brand-fg3">
               <span>Reward pool</span>
-              <Tooltip content="Total prize money the brand has funded for this brief. After judging closes, it’s split across the top contributors per the brief’s winner rules.">
+              <Tooltip content="Total prize money the brand has funded for this brief. After judging closes, it's split across the top contributors per the brief's winner rules.">
                 {(id) => (
                   <button
                     type="button"

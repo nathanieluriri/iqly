@@ -10,6 +10,7 @@ import { Input, SearchInput } from "./ui/input";
 import { ChipToggle, Separator, Skeleton, Spinner, Tooltip } from "./ui/misc";
 import { EmptyState, PageHeader, Pagination } from "./ui/page";
 import { Select } from "./ui/select";
+import { Combobox } from "./ui/combobox";
 import { Tabs } from "./ui/tabs";
 import { ToastView } from "./ui/toast";
 import { Logo, Logomark } from "./iqly/logo";
@@ -68,6 +69,7 @@ export default function Gallery({ version }: { version: string }) {
   const [tab, setTab] = useState("withdrawals");
   const [chip, setChip] = useState(true);
   const [page, setPage] = useState(1);
+  const [uni, setUni] = useState("");
 
   return (
     <div className="space-y-6">
@@ -161,17 +163,24 @@ export default function Gallery({ version }: { version: string }) {
 
       <Section title="Form controls">
         <div className="grid gap-4 sm:grid-cols-2">
-          <FormField label="Account number" help="Minimum ₦1,000 · available ₦12,500.00">
+          <FormField label="Account number">
             <Input placeholder="0123456789" inputMode="numeric" />
           </FormField>
           <FormField label="Account number" error="Could not verify account">
-            <Input defaultValue="01234" />
+            <Input defaultValue="0123456780" />
           </FormField>
+          <div className="space-y-1">
+            <Input type="number" placeholder="1000" aria-label="Amount in naira" />
+            <p className="type-meta-caption text-fg3">Minimum ₦1,000 · available ₦12,500.00</p>
+          </div>
           <FormField label="Bank">
             <Select value="" onChange={() => {}} placeholder="Select bank" options={[{ value: "044", label: "Access Bank" }]} />
           </FormField>
-          <FormField label="Phone" caps>
+          <FormField label="Country" caps>
             <Input disabled defaultValue="Nigeria" />
+          </FormField>
+          <FormField label="University" caps>
+            <Combobox value={uni} onChange={setUni} options={[{ value: "University of Lagos", label: "University of Lagos" }, { value: "Covenant University", label: "Covenant University" }]} placeholder="Select your university" searchPlaceholder="Search universities…" emptyText="No university found." />
           </FormField>
           <SearchInput placeholder="Search by title…" />
           <div className="flex flex-wrap gap-2">
@@ -241,7 +250,7 @@ export default function Gallery({ version }: { version: string }) {
       </Section>
 
       <Section title="Page parts">
-        <PageHeader title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you’re ready." />
+        <PageHeader title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you're ready." />
         <EmptyState title="No briefs match these filters" body="Try widening your search or clearing some filters." />
         <Pagination page={page} pageCount={8} onPageChange={setPage} />
       </Section>
@@ -269,12 +278,13 @@ export default function Gallery({ version }: { version: string }) {
         <BalanceCard withdrawable={1_250_000} pendingWithdrawals={1_000_000} totalEarned={6_250_000} />
         <div className="divide-y divide-line">
           <WithdrawalRow amount={1_000_000} createdAt={new Date(now - 2 * 3_600_000).toISOString()} status="pending" />
-          <WithdrawalRow amount={4_000_000} createdAt={ago(12)} status="completed" />
-          <WithdrawalRow amount={500_000} createdAt={ago(30)} status="failed" />
+          <WithdrawalRow amount={4_000_000} createdAt={ago(10)} status="completed" />
+          <WithdrawalRow amount={500_000} createdAt={ago(11)} status="failed" />
         </div>
         <div className="divide-y divide-line">
-          <LedgerRow type="award" amount={5_000_000} createdAt={ago(30)} />
-          <LedgerRow type="withdrawal" amount={-4_000_000} createdAt={ago(12)} />
+          <LedgerRow type="award" amount={1_250_000} createdAt={ago(2)} />
+          <LedgerRow type="withdrawal" amount={-4_000_000} createdAt={ago(10)} />
+          <LedgerRow type="award" amount={5_000_000} createdAt={ago(13)} />
         </div>
       </Section>
 

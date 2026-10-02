@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Card, CardContent, CardHeader, CardTitle, ChipToggle, FormField, Input, PageHeader, Select, useToast } from "../ds";
+import { Button, Card, CardContent, CardHeader, CardTitle, ChipToggle, Combobox, FormField, Input, PageHeader, Select, useToast } from "../ds";
 import { USER } from "../data/demo";
 import { EDUCATION, GENDERS, HEARD_ABOUT, INTERESTS, OCCUPATIONS, STATES, UNIVERSITIES } from "../data/reference";
 
@@ -19,7 +19,7 @@ export function ProfilePage() {
 
 function Details() {
   const toast = useToast();
-  const [f, setF] = useState({ phone: "08012345678", dob: "2001-04-12", gender: "female", education: "hnd_bsc", city: "Yaba", origin: "Anambra", residence: "Lagos", university: "University of Lagos", heard: "whatsapp" });
+  const [f, setF] = useState({ phone: "08012345678", dob: "2001-04-12", gender: "female", education: "hnd_bsc", city: "Ikeja", origin: "Anambra", residence: "Lagos", university: "University of Lagos", heard: "whatsapp" });
   const [occupations, setOccupations] = useState<string[]>(["student"]);
   const [interests, setInterests] = useState<string[]>(["marketing_advertising", "finance_fintech"]);
   const [saving, setSaving] = useState(false);
@@ -70,7 +70,7 @@ function Details() {
         <ChipGroup label="Occupations" options={OCCUPATIONS} selected={occupations} onToggle={(v) => setOccupations((o) => toggle(o, v))} />
         {student ? (
           <FormField caps label="University">
-            <Select className="w-full" value={f.university} onChange={set("university")} placeholder="Select your university" options={uniOptions} />
+            <Combobox value={f.university} onChange={(v) => setF((s) => ({ ...s, university: v }))} options={uniOptions} placeholder="Select your university" searchPlaceholder="Search universities…" emptyText="No university found." />
           </FormField>
         ) : null}
         <ChipGroup label="Interests" options={INTERESTS} selected={interests} onToggle={(v) => setInterests((o) => toggle(o, v))} />
