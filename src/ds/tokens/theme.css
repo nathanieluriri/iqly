@@ -1,0 +1,105 @@
+/* Generated: maps design-system tokens to Tailwind utilities. Do not edit. */
+@theme inline {
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, monospace;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-bg: var(--ds-color-bg);
+  --color-panel: var(--ds-color-panel);
+  --color-card: var(--ds-color-card);
+  --color-fg: var(--ds-color-fg);
+  --color-fg2: var(--ds-color-fg2);
+  --color-fg3: var(--ds-color-fg3);
+  --color-line: var(--ds-color-line);
+  --color-line2: var(--ds-color-line2);
+  --color-brand: var(--ds-color-brand);
+  --color-brand-dark: var(--ds-color-brand-dark);
+  --color-brand-warm: var(--ds-color-brand-warm);
+  --color-primary: var(--ds-color-primary);
+  --color-primary-fg: var(--ds-color-primary-fg);
+  --color-tint: var(--ds-color-tint);
+  --color-tint-strong: var(--ds-color-tint-strong);
+  --color-accent: var(--ds-color-accent);
+  --color-accent-strong: var(--ds-color-accent-strong);
+  --color-accent-soft: var(--ds-color-accent-soft);
+  --color-ok: var(--ds-color-ok);
+  --color-ok-soft: var(--ds-color-ok-soft);
+  --color-ok-dot: var(--ds-color-ok-dot);
+  --color-warn: var(--ds-color-warn);
+  --color-warn-soft: var(--ds-color-warn-soft);
+  --color-warn-dot: var(--ds-color-warn-dot);
+  --color-err: var(--ds-color-err);
+  --color-err-soft: var(--ds-color-err-soft);
+  --color-err-strong: var(--ds-color-err-strong);
+  --color-info: var(--ds-color-info);
+  --color-info-soft: var(--ds-color-info-soft);
+  --color-info-dot: var(--ds-color-info-dot);
+  --color-sidebar: var(--ds-color-sidebar);
+  --color-sidebar-fg: var(--ds-color-sidebar-fg);
+  --color-sidebar-accent: var(--ds-color-sidebar-accent);
+  --color-sidebar-border: var(--ds-color-sidebar-border);
+  --color-sidebar-active: var(--ds-color-sidebar-active);
+  --color-focus: var(--ds-color-focus);
+  --color-brand-fg2: var(--ds-color-brand-fg2);
+  --color-brand-fg3: var(--ds-color-brand-fg3);
+  --color-brand-line2: var(--ds-color-brand-line2);
+  --color-brand-line: var(--ds-color-brand-line);
+  --color-brand-soft: var(--ds-color-brand-soft);
+  --color-brand-wash: var(--ds-color-brand-wash);
+  --color-card-glass: var(--ds-color-card-glass);
+  --color-primary-hover: var(--ds-color-primary-hover);
+  --color-secondary: var(--ds-color-secondary);
+  --color-secondary-hover: var(--ds-color-secondary-hover);
+  --color-secondary-fg: var(--ds-color-secondary-fg);
+  --color-err-wash: var(--ds-color-err-wash);
+  --color-err-wash-hover: var(--ds-color-err-wash-hover);
+  --color-ring: var(--ds-color-ring);
+  --color-brand-fg-60: var(--ds-color-brand-fg-60);
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+  --radius-2xl: var(--ds-radius-2xl);
+  --radius-full: var(--ds-radius-full);
+  --shadow-xs: var(--ds-shadow-xs);
+  --shadow-sm: var(--ds-shadow-sm);
+  --shadow-md: var(--ds-shadow-md);
+  --shadow-lg: var(--ds-shadow-lg);
+  --shadow-focus-ring: var(--ds-shadow-focus-ring);
+  --shadow-focus-ring-error: var(--ds-shadow-focus-ring-error);
+}
+@layer components {
+  .type-display-hero{font-family:var(--ds-type-display-hero-family);font-size:var(--ds-type-display-hero-size);font-weight:var(--ds-type-display-hero-weight);line-height:var(--ds-type-display-hero-leading);letter-spacing:var(--ds-type-display-hero-tracking);text-transform:var(--ds-type-display-hero-case)}
+  .type-heading-h1{font-family:var(--ds-type-heading-h1-family);font-size:var(--ds-type-heading-h1-size);font-weight:var(--ds-type-heading-h1-weight);line-height:var(--ds-type-heading-h1-leading);letter-spacing:var(--ds-type-heading-h1-tracking);text-transform:var(--ds-type-heading-h1-case)}
+  .type-heading-h2{font-family:var(--ds-type-heading-h2-family);font-size:var(--ds-type-heading-h2-size);font-weight:var(--ds-type-heading-h2-weight);line-height:var(--ds-type-heading-h2-leading);letter-spacing:var(--ds-type-heading-h2-tracking);text-transform:var(--ds-type-heading-h2-case)}
+  .type-heading-h3{font-family:var(--ds-type-heading-h3-family);font-size:var(--ds-type-heading-h3-size);font-weight:var(--ds-type-heading-h3-weight);line-height:var(--ds-type-heading-h3-leading);letter-spacing:var(--ds-type-heading-h3-tracking);text-transform:var(--ds-type-heading-h3-case)}
+  .type-heading-card-title{font-family:var(--ds-type-heading-card-title-family);font-size:var(--ds-type-heading-card-title-size);font-weight:var(--ds-type-heading-card-title-weight);line-height:var(--ds-type-heading-card-title-leading);letter-spacing:var(--ds-type-heading-card-title-tracking);text-transform:var(--ds-type-heading-card-title-case)}
+  .type-body-lead{font-family:var(--ds-type-body-lead-family);font-size:var(--ds-type-body-lead-size);font-weight:var(--ds-type-body-lead-weight);line-height:var(--ds-type-body-lead-leading);letter-spacing:var(--ds-type-body-lead-tracking);text-transform:var(--ds-type-body-lead-case)}
+  .type-body-base{font-family:var(--ds-type-body-base-family);font-size:var(--ds-type-body-base-size);font-weight:var(--ds-type-body-base-weight);line-height:var(--ds-type-body-base-leading);letter-spacing:var(--ds-type-body-base-tracking);text-transform:var(--ds-type-body-base-case)}
+  .type-body-small{font-family:var(--ds-type-body-small-family);font-size:var(--ds-type-body-small-size);font-weight:var(--ds-type-body-small-weight);line-height:var(--ds-type-body-small-leading);letter-spacing:var(--ds-type-body-small-tracking);text-transform:var(--ds-type-body-small-case)}
+  .type-body-small-strong{font-family:var(--ds-type-body-small-strong-family);font-size:var(--ds-type-body-small-strong-size);font-weight:var(--ds-type-body-small-strong-weight);line-height:var(--ds-type-body-small-strong-leading);letter-spacing:var(--ds-type-body-small-strong-tracking);text-transform:var(--ds-type-body-small-strong-case)}
+  .type-label-button{font-family:var(--ds-type-label-button-family);font-size:var(--ds-type-label-button-size);font-weight:var(--ds-type-label-button-weight);line-height:var(--ds-type-label-button-leading);letter-spacing:var(--ds-type-label-button-tracking);text-transform:var(--ds-type-label-button-case)}
+  .type-label-badge{font-family:var(--ds-type-label-badge-family);font-size:var(--ds-type-label-badge-size);font-weight:var(--ds-type-label-badge-weight);line-height:var(--ds-type-label-badge-leading);letter-spacing:var(--ds-type-label-badge-tracking);text-transform:var(--ds-type-label-badge-case)}
+  .type-meta-caption{font-family:var(--ds-type-meta-caption-family);font-size:var(--ds-type-meta-caption-size);font-weight:var(--ds-type-meta-caption-weight);line-height:var(--ds-type-meta-caption-leading);letter-spacing:var(--ds-type-meta-caption-tracking);text-transform:var(--ds-type-meta-caption-case)}
+  .type-figure-balance{font-family:var(--ds-type-figure-balance-family);font-size:var(--ds-type-figure-balance-size);font-weight:var(--ds-type-figure-balance-weight);line-height:var(--ds-type-figure-balance-leading);letter-spacing:var(--ds-type-figure-balance-tracking);text-transform:var(--ds-type-figure-balance-case)}
+  .type-figure-reward{font-family:var(--ds-type-figure-reward-family);font-size:var(--ds-type-figure-reward-size);font-weight:var(--ds-type-figure-reward-weight);line-height:var(--ds-type-figure-reward-leading);letter-spacing:var(--ds-type-figure-reward-tracking);text-transform:var(--ds-type-figure-reward-case)}
+  .type-mono-eyebrow{font-family:var(--ds-type-mono-eyebrow-family);font-size:var(--ds-type-mono-eyebrow-size);font-weight:var(--ds-type-mono-eyebrow-weight);line-height:var(--ds-type-mono-eyebrow-leading);letter-spacing:var(--ds-type-mono-eyebrow-tracking);text-transform:var(--ds-type-mono-eyebrow-case)}
+  .type-mono-ledger-type{font-family:var(--ds-type-mono-ledger-type-family);font-size:var(--ds-type-mono-ledger-type-size);font-weight:var(--ds-type-mono-ledger-type-weight);line-height:var(--ds-type-mono-ledger-type-leading);letter-spacing:var(--ds-type-mono-ledger-type-tracking);text-transform:var(--ds-type-mono-ledger-type-case)}
+  .type-mono-code{font-family:var(--ds-type-mono-code-family);font-size:var(--ds-type-mono-code-size);font-weight:var(--ds-type-mono-code-weight);line-height:var(--ds-type-mono-code-leading);letter-spacing:var(--ds-type-mono-code-tracking);text-transform:var(--ds-type-mono-code-case)}
+  .type-heading-card-section{font-family:var(--ds-type-heading-card-section-family);font-size:var(--ds-type-heading-card-section-size);font-weight:var(--ds-type-heading-card-section-weight);line-height:var(--ds-type-heading-card-section-leading);letter-spacing:var(--ds-type-heading-card-section-tracking);text-transform:var(--ds-type-heading-card-section-case)}
+  .type-label-overline{font-family:var(--ds-type-label-overline-family);font-size:var(--ds-type-label-overline-size);font-weight:var(--ds-type-label-overline-weight);line-height:var(--ds-type-label-overline-leading);letter-spacing:var(--ds-type-label-overline-tracking);text-transform:var(--ds-type-label-overline-case)}
+  .type-mono-avatar-initial{font-family:var(--ds-type-mono-avatar-initial-family);font-size:var(--ds-type-mono-avatar-initial-size);font-weight:var(--ds-type-mono-avatar-initial-weight);line-height:var(--ds-type-mono-avatar-initial-leading);letter-spacing:var(--ds-type-mono-avatar-initial-tracking);text-transform:var(--ds-type-mono-avatar-initial-case)}
+  .type-label-field{font-family:var(--ds-type-label-field-family);font-size:var(--ds-type-label-field-size);font-weight:var(--ds-type-label-field-weight);line-height:var(--ds-type-label-field-leading);letter-spacing:var(--ds-type-label-field-tracking);text-transform:var(--ds-type-label-field-case)}
+  .type-heading-page-title{font-family:var(--ds-type-heading-page-title-family);font-size:var(--ds-type-heading-page-title-size);font-weight:var(--ds-type-heading-page-title-weight);line-height:var(--ds-type-heading-page-title-leading);letter-spacing:var(--ds-type-heading-page-title-tracking);text-transform:var(--ds-type-heading-page-title-case)}
+  .type-label-button-small{font-family:var(--ds-type-label-button-small-family);font-size:var(--ds-type-label-button-small-size);font-weight:var(--ds-type-label-button-small-weight);line-height:var(--ds-type-label-button-small-leading);letter-spacing:var(--ds-type-label-button-small-tracking);text-transform:var(--ds-type-label-button-small-case)}
+  .type-mono-card-eyebrow{font-family:var(--ds-type-mono-card-eyebrow-family);font-size:var(--ds-type-mono-card-eyebrow-size);font-weight:var(--ds-type-mono-card-eyebrow-weight);line-height:var(--ds-type-mono-card-eyebrow-leading);letter-spacing:var(--ds-type-mono-card-eyebrow-tracking);text-transform:var(--ds-type-mono-card-eyebrow-case)}
+  .type-mono-micro{font-family:var(--ds-type-mono-micro-family);font-size:var(--ds-type-mono-micro-size);font-weight:var(--ds-type-mono-micro-weight);line-height:var(--ds-type-mono-micro-leading);letter-spacing:var(--ds-type-mono-micro-tracking);text-transform:var(--ds-type-mono-micro-case)}
+  .type-mono-pill{font-family:var(--ds-type-mono-pill-family);font-size:var(--ds-type-mono-pill-size);font-weight:var(--ds-type-mono-pill-weight);line-height:var(--ds-type-mono-pill-leading);letter-spacing:var(--ds-type-mono-pill-tracking);text-transform:var(--ds-type-mono-pill-case)}
+  .type-body-relaxed{font-family:var(--ds-type-body-relaxed-family);font-size:var(--ds-type-body-relaxed-size);font-weight:var(--ds-type-body-relaxed-weight);line-height:var(--ds-type-body-relaxed-leading);letter-spacing:var(--ds-type-body-relaxed-tracking);text-transform:var(--ds-type-body-relaxed-case)}
+  .type-display-cover{font-family:var(--ds-type-display-cover-family);font-size:var(--ds-type-display-cover-size);font-weight:var(--ds-type-display-cover-weight);line-height:var(--ds-type-display-cover-leading);letter-spacing:var(--ds-type-display-cover-tracking);text-transform:var(--ds-type-display-cover-case)}
+  .type-body-cover-lead{font-family:var(--ds-type-body-cover-lead-family);font-size:var(--ds-type-body-cover-lead-size);font-weight:var(--ds-type-body-cover-lead-weight);line-height:var(--ds-type-body-cover-lead-leading);letter-spacing:var(--ds-type-body-cover-lead-tracking);text-transform:var(--ds-type-body-cover-lead-case)}
+  .type-label-field-caps{font-family:var(--ds-type-label-field-caps-family);font-size:var(--ds-type-label-field-caps-size);font-weight:var(--ds-type-label-field-caps-weight);line-height:var(--ds-type-label-field-caps-leading);letter-spacing:var(--ds-type-label-field-caps-tracking);text-transform:var(--ds-type-label-field-caps-case)}
+}
