@@ -21,21 +21,31 @@ export function DiscoverPage() {
   const q = params.get("q") ?? "";
   const [draft, setDraft] = useState(q);
 
-  const set = (key: string, value: string, fallback: string) =>
-    setParams((p) => {
-      const n = new URLSearchParams(p);
-      if (value === fallback || value === "") n.delete(key);
-      else n.set(key, value);
-      if (key !== "page") n.delete("page");
-      return n;
-    });
+  const set = (key: string, value: string, fallback: string, replace = false) =>
+    setParams(
+      (p) => {
+        const n = new URLSearchParams(p);
+        if (value === fallback || value === "") n.delete(key);
+        else n.set(key, value);
+        if (key !== "page") n.delete("page");
+        return n;
+      },
+      { replace },
+    );
 
+  // Back/forward changes q in the URL; mirror it into the field.
+  useEffect(() => {
+    setDraft((d) => (d.trim() === q ? d : q));
+  }, [q]);
+
+  // Typing replaces the history entry instead of stacking one per keystroke.
   useEffect(() => {
     const t = window.setTimeout(() => {
-      if (draft.trim() !== q) set("q", draft.trim(), "");
+      if (draft.trim() !== q) set("q", draft.trim(), "", true);
     }, 300);
     return () => window.clearTimeout(t);
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [draft]);
 
   const filtered = useMemo(() => {
     const items = CHALLENGES.filter(
@@ -58,7 +68,8 @@ export function DiscoverPage() {
   }, [tier, category, status, sort, q]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
-  const visible = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const current = Math.min(page, pageCount);
+  const visible = filtered.slice((current - 1) * PER_PAGE, current * PER_PAGE);
   const hasFilters = tier !== "all" || category !== "all" || status !== "all" || q.length > 0;
 
   return (
@@ -100,7 +111,7 @@ export function DiscoverPage() {
               <ChallengeCard key={c.id} c={c} href={`/dashboard/challenges/${c.id}`} />
             ))}
           </div>
-          {pageCount > 1 ? <Pagination page={page} pageCount={pageCount} onPageChange={(p) => set("page", String(p), "1")} /> : null}
+          {pageCount > 1 ? <Pagination page={current} pageCount={pageCount} onPageChange={(p) => set("page", String(p), "1")} /> : null}
         </>
       )}
     </div>

@@ -23,5 +23,13 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "/design-system", element: <DesignSystemPage /> },
+  {
+    path: "/signed-out",
+    element: (
+      <div className="min-h-svh bg-bg">
+        <NotBuiltPage what="Sign in" back="/dashboard/challenges" backLabel="Discover" />
+      </div>
+    ),
+  },
   { path: "*", element: <Navigate to="/dashboard/challenges" replace /> },
 ]);

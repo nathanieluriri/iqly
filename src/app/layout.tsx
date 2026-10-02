@@ -1,5 +1,5 @@
-import { forwardRef, useEffect, useRef, useState, type AnchorHTMLAttributes } from "react";
-import { Link as RouterLink, Outlet, useLocation } from "react-router";
+import { createContext, forwardRef, useContext, useEffect, useRef, useState, type AnchorHTMLAttributes } from "react";
+import { Link as RouterLink, Outlet, useLocation, useNavigate } from "react-router";
 import { Compass, FileText, UserRound, Wallet } from "lucide-react";
 import { AppHeader, LinkProvider, Sidebar, ToastProvider, type LinkLike, type NavItem } from "../ds";
 import { USER } from "../data/demo";
@@ -7,6 +7,9 @@ import { USER } from "../data/demo";
 export const AppLink: LinkLike = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }>(function AppLink({ href, ...props }, ref) {
   return /^(https?:|#)/.test(href) ? <a ref={ref} href={href} {...props} /> : <RouterLink ref={ref} to={href} {...props} />;
 });
+
+const UserContext = createContext({ user: USER, setName: (_: string) => {} });
+export const useUser = () => useContext(UserContext);
 
 const NAV: NavItem[] = [
   { label: "Discover", href: "/dashboard/challenges", icon: Compass },
@@ -17,6 +20,8 @@ const NAV: NavItem[] = [
 
 export function DashboardLayout() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [user, setUser] = useState(USER);
   // Between md and lg the full sidebar would take a third of the width, so it starts as an icon rail.
   const [collapsed, setCollapsed] = useState(() => !window.matchMedia("(min-width: 1024px)").matches);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,7 +39,7 @@ export function DashboardLayout() {
   useEffect(() => {
     if (!mobileOpen) return;
     const el = drawer.current;
-    const focusables = () => Array.from(el?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? []);
+    const focusables = () => Array.from(el?.querySelectorAll<HTMLElement>('a[href], button:not([disabled]):not([tabindex="-1"])') ?? []);
     focusables()[0]?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMobileOpen(false);
@@ -59,25 +64,27 @@ export function DashboardLayout() {
 
   return (
     <LinkProvider value={AppLink}>
+      <UserContext.Provider value={{ user, setName: (name) => setUser((u) => ({ ...u, name })) }}>
       <ToastProvider>
         <div className="flex min-h-svh bg-card">
           <div className="sticky top-0 hidden h-svh md:block">
-            <Sidebar items={NAV} activeHref={pathname} user={USER} collapsed={collapsed} />
+            <Sidebar items={NAV} activeHref={pathname} user={user} collapsed={collapsed} />
           </div>
           {mobileOpen ? (
             <div ref={drawer} className="fixed inset-0 z-40 md:hidden" role="dialog" aria-modal="true" aria-label="Sidebar">
               <button type="button" aria-label="Close" tabIndex={-1} className="absolute inset-0 bg-fg/50" onClick={() => setMobileOpen(false)} />
-              <Sidebar items={NAV} activeHref={pathname} user={USER} className="relative h-full" onNavigate={() => setMobileOpen(false)} />
+              <Sidebar items={NAV} activeHref={pathname} user={user} className="relative h-full" onNavigate={() => setMobileOpen(false)} />
             </div>
           ) : null}
           <div className="flex min-w-0 flex-1 flex-col bg-bg/30">
-            <AppHeader onToggleSidebar={toggle} user={USER} onSignOut={() => {}} notice="Sample data" />
+            <AppHeader onToggleSidebar={toggle} user={user} onSignOut={() => navigate("/signed-out")} notice="Sample data" />
             <main className="flex-1">
               <Outlet />
             </main>
           </div>
         </div>
       </ToastProvider>
+      </UserContext.Provider>
     </LinkProvider>
   );
 }

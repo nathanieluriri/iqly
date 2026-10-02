@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Card, CardContent, CardHeader, CardTitle, ChipToggle, Combobox, FormField, Input, PageHeader, Select, useToast } from "../ds";
-import { USER } from "../data/demo";
+import { useUser } from "../app/layout";
 import { EDUCATION, GENDERS, HEARD_ABOUT, INTERESTS, OCCUPATIONS, STATES, UNIVERSITIES } from "../data/reference";
 
 const stateOptions = STATES.map((s) => ({ value: s, label: s }));
@@ -104,7 +104,8 @@ function ChipGroup({ label, options, selected, onToggle }: { label: string; opti
 
 function Account() {
   const toast = useToast();
-  const [name, setName] = useState(USER.name);
+  const { user, setName: saveName } = useUser();
+  const [name, setName] = useState(user.name);
   const [current, setCurrent] = useState("");
   const [next, setNext] = useState("");
   return (
@@ -118,11 +119,14 @@ function Account() {
             <Input value={name} onChange={(e) => setName(e.target.value)} />
           </FormField>
           <FormField caps label="Email">
-            <Input value={USER.email} disabled />
+            <Input value={user.email} disabled />
           </FormField>
         </div>
         <div className="flex justify-end">
-          <Button variant="outline" disabled={!name.trim()} onClick={() => toast.success("Account updated")}>
+          <Button variant="outline" disabled={!name.trim()} onClick={() => {
+              saveName(name.trim());
+              toast.success("Account updated");
+            }}>
             Update name
           </Button>
         </div>

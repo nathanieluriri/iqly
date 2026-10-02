@@ -22,7 +22,9 @@ export function DesignSystemPage() {
       <ToastProvider>
         <div className="min-h-svh bg-bg">
           <header className="flex h-16 items-center gap-4 border-b border-line bg-card px-4 sm:px-6">
-            <Logo />
+            <AppLink href="/dashboard/challenges" aria-label="Back to the dashboard" className="rounded-md focus-visible:shadow-focus-ring">
+              <Logo />
+            </AppLink>
             <span className="hidden type-mono-eyebrow text-accent-strong sm:inline">Design system</span>
             <Select
               aria-label="Version"

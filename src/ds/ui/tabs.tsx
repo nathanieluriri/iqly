@@ -17,10 +17,10 @@ export function Tabs<T extends string>({
   const id = useId();
   const refs = useRef<Array<HTMLButtonElement | null>>([]);
   const onKey = (e: KeyboardEvent, i: number) => {
-    const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-    if (!d) return;
+    const n =
+      e.key === "ArrowRight" ? (i + 1) % items.length : e.key === "ArrowLeft" ? (i - 1 + items.length) % items.length : e.key === "Home" ? 0 : e.key === "End" ? items.length - 1 : -1;
+    if (n < 0) return;
     e.preventDefault();
-    const n = (i + d + items.length) % items.length;
     onChange(items[n].value);
     refs.current[n]?.focus();
   };
