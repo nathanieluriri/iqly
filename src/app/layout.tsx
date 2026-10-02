@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useState, type AnchorHTMLAttributes } from "react";
+import { forwardRef, useEffect, useRef, useState, type AnchorHTMLAttributes } from "react";
 import { Link as RouterLink, Outlet, useLocation } from "react-router";
 import { Compass, FileText, UserRound, Wallet } from "lucide-react";
 import { AppHeader, LinkProvider, Sidebar, ToastProvider, type LinkLike, type NavItem } from "../ds";
@@ -17,10 +17,45 @@ const NAV: NavItem[] = [
 
 export function DashboardLayout() {
   const { pathname } = useLocation();
-  const [collapsed, setCollapsed] = useState(false);
+  // Between md and lg the full sidebar would take a third of the width, so it starts as an icon rail.
+  const [collapsed, setCollapsed] = useState(() => !window.matchMedia("(min-width: 1024px)").matches);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const drawer = useRef<HTMLDivElement>(null);
+  const opener = useRef<HTMLElement | null>(null);
   useEffect(() => setMobileOpen(false), [pathname]);
-  const toggle = () => (window.matchMedia("(min-width: 768px)").matches ? setCollapsed((c) => !c) : setMobileOpen((o) => !o));
+  const toggle = () => {
+    if (window.matchMedia("(min-width: 768px)").matches) setCollapsed((c) => !c);
+    else {
+      opener.current = document.activeElement as HTMLElement;
+      setMobileOpen((o) => !o);
+    }
+  };
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const el = drawer.current;
+    const focusables = () => Array.from(el?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? []);
+    focusables()[0]?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+      if (e.key !== "Tab") return;
+      const f = focusables();
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      opener.current?.focus();
+    };
+  }, [mobileOpen]);
 
   return (
     <LinkProvider value={AppLink}>
@@ -30,8 +65,8 @@ export function DashboardLayout() {
             <Sidebar items={NAV} activeHref={pathname} user={USER} collapsed={collapsed} />
           </div>
           {mobileOpen ? (
-            <div className="fixed inset-0 z-40 md:hidden" role="dialog" aria-modal="true" aria-label="Sidebar">
-              <button type="button" aria-label="Close" className="absolute inset-0 bg-fg/50" onClick={() => setMobileOpen(false)} />
+            <div ref={drawer} className="fixed inset-0 z-40 md:hidden" role="dialog" aria-modal="true" aria-label="Sidebar">
+              <button type="button" aria-label="Close" tabIndex={-1} className="absolute inset-0 bg-fg/50" onClick={() => setMobileOpen(false)} />
               <Sidebar items={NAV} activeHref={pathname} user={USER} className="relative h-full" onNavigate={() => setMobileOpen(false)} />
             </div>
           ) : null}

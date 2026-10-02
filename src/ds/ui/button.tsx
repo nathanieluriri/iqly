@@ -5,15 +5,15 @@ export type ButtonVariant = "default" | "outline" | "secondary" | "ghost" | "des
 export type ButtonSize = "default" | "sm" | "icon" | "icon-sm";
 
 const base =
-  "inline-flex shrink-0 items-center justify-center whitespace-nowrap border transition-colors outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:border-line2 focus-visible:shadow-focus-ring [&_svg]:size-4 [&_svg]:shrink-0";
+  "inline-flex shrink-0 items-center justify-center whitespace-nowrap border transition-colors outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0";
 
 const variants: Record<ButtonVariant, string> = {
-  default: "border-transparent bg-primary text-primary-fg hover:bg-primary-hover",
-  outline: "border-line bg-card text-fg hover:bg-panel",
-  secondary: "border-transparent bg-secondary text-secondary-fg hover:bg-secondary-hover",
-  ghost: "border-transparent text-fg hover:bg-panel",
+  default: "border-transparent bg-primary text-primary-fg hover:bg-primary-hover focus-visible:border-line2 focus-visible:shadow-focus-ring",
+  outline: "border-line bg-card text-fg hover:bg-panel focus-visible:border-line2 focus-visible:shadow-focus-ring",
+  secondary: "border-transparent bg-secondary text-secondary-fg hover:bg-secondary-hover focus-visible:border-line2 focus-visible:shadow-focus-ring",
+  ghost: "border-transparent text-fg hover:bg-panel focus-visible:border-line2 focus-visible:shadow-focus-ring",
   destructive: "border-transparent bg-err-wash text-err hover:bg-err-wash-hover focus-visible:border-err focus-visible:shadow-focus-ring-error",
-  link: "border-transparent text-primary underline-offset-4 hover:underline",
+  link: "border-transparent text-primary underline-offset-4 hover:underline focus-visible:border-line2 focus-visible:shadow-focus-ring",
 };
 
 const sizes: Record<ButtonSize, string> = {

@@ -81,7 +81,7 @@ export function Combobox({
           setOpen((o) => !o);
           setActive(0);
         }}
-        className={cn(fieldClasses, "flex items-center justify-between gap-1.5 text-left", selected ? "text-fg" : "text-fg3")}
+        className={cn(fieldClasses, "flex items-center justify-between gap-1.5 px-2.5 text-left", selected ? "text-fg" : "text-fg3")}
       >
         <span className="truncate">{selected ? selected.label : placeholder}</span>
         <ChevronDown aria-hidden className="size-4 shrink-0 text-fg3" />

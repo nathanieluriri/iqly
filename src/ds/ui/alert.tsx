@@ -14,7 +14,9 @@ export function SavedBank({ bankName, accountName, last4 }: { bankName: string; 
     <div className="rounded-md border border-line bg-card p-4 type-body-small">
       <p className="type-body-small-strong text-fg">{bankName}</p>
       <p className="text-fg3">
-        {accountName} · ••••{last4}
+        {accountName} · <span aria-hidden>••••</span>
+        <span className="sr-only">account ending </span>
+        {last4}
       </p>
     </div>
   );

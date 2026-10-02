@@ -1,4 +1,4 @@
-import { useId, type HTMLAttributes, type ReactNode } from "react";
+import { useId, useState, type HTMLAttributes, type ReactNode } from "react";
 import { LoaderCircle } from "lucide-react";
 import { cn } from "../lib/cn";
 
@@ -16,8 +16,14 @@ export function Spinner({ className, label = "Loading" }: { className?: string; 
 
 export function Tooltip({ content, children, side = "top" }: { content: ReactNode; children: (describedBy: string) => ReactNode; side?: "top" | "bottom" }) {
   const id = useId();
+  const [dismissed, setDismissed] = useState(false);
   return (
-    <span className="group/tooltip relative inline-flex">
+    <span
+      className="group/tooltip relative inline-flex"
+      onKeyDown={(e) => e.key === "Escape" && setDismissed(true)}
+      onMouseLeave={() => setDismissed(false)}
+      onBlur={() => setDismissed(false)}
+    >
       {children(id)}
       <span
         id={id}
@@ -25,6 +31,7 @@ export function Tooltip({ content, children, side = "top" }: { content: ReactNod
         className={cn(
           "pointer-events-none absolute left-1/2 z-50 hidden w-max max-w-[min(16rem,calc(100vw-2rem))] -translate-x-1/2 rounded-md bg-fg px-3 py-1.5 type-meta-caption text-card group-focus-within/tooltip:block group-hover/tooltip:block",
           side === "top" ? "bottom-full mb-2" : "top-full mt-2",
+          dismissed && "group-focus-within/tooltip:hidden group-hover/tooltip:hidden",
         )}
       >
         {content}

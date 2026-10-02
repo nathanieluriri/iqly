@@ -17,7 +17,7 @@ export function Select({
     <div className={cn("relative", className)}>
       <select
         value={value ?? ""}
-        className={cn(fieldClasses, "cursor-pointer appearance-none pr-8", empty && placeholder ? "text-fg3" : "text-fg")}
+        className={cn(fieldClasses, "cursor-pointer appearance-none pr-8 pl-2.5", empty && placeholder ? "text-fg3" : "text-fg")}
         {...props}
       >
         {placeholder ? (

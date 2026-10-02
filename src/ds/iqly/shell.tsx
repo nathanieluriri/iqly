@@ -28,7 +28,7 @@ export function Sidebar({
   return (
     <aside className={cn("flex h-full flex-col border-r border-sidebar-border bg-sidebar text-sidebar-fg transition-[width]", collapsed ? "w-12" : "w-[280px]", className)}>
       <div className={cn("flex h-16 shrink-0 items-center border-b border-sidebar-border", collapsed ? "justify-center" : "px-4")}>
-        <Link href="/dashboard/challenges" className="rounded-md outline-none focus-visible:outline-2 focus-visible:outline-focus" onClick={onNavigate}>
+        <Link href="/dashboard/challenges" className="rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus focus-visible:outline-solid" onClick={onNavigate}>
           {collapsed ? <Logomark tone="on-dark" /> : <Logo tone="on-dark" />}
         </Link>
       </div>
@@ -45,9 +45,9 @@ export function Sidebar({
                   title={collapsed ? it.label : undefined}
                   onClick={onNavigate}
                   className={cn(
-                    "flex items-center gap-2 rounded-md type-body-small outline-none transition-colors hover:bg-sidebar-accent focus-visible:outline-2 focus-visible:outline-focus",
+                    "flex items-center gap-2 rounded-md transition-colors hover:bg-sidebar-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus focus-visible:outline-solid",
                     collapsed ? "size-8 justify-center" : "h-11 p-2",
-                    active && "bg-sidebar-accent type-body-small-strong",
+                    active ? "bg-sidebar-accent type-body-small-strong" : "type-body-small",
                   )}
                 >
                   <Icon className="size-4 shrink-0" />
@@ -69,10 +69,15 @@ export function Sidebar({
 export function AppHeader({ onToggleSidebar, user, onSignOut, notice }: { onToggleSidebar: () => void; user: { name: string; email: string }; onSignOut: () => void; notice?: ReactNode }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     if (!open) return;
     const close = (e: MouseEvent | KeyboardEvent) => {
-      if (e instanceof KeyboardEvent ? e.key === "Escape" : !ref.current?.contains(e.target as Node)) setOpen(false);
+      if (e instanceof KeyboardEvent) {
+        if (e.key !== "Escape") return;
+        setOpen(false);
+        trigger.current?.focus();
+      } else if (!ref.current?.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener("mousedown", close);
     document.addEventListener("keydown", close);
@@ -90,9 +95,10 @@ export function AppHeader({ onToggleSidebar, user, onSignOut, notice }: { onTogg
         {notice ? <Badge variant="neutral">{notice}</Badge> : null}
         <div ref={ref} className="relative">
           <button
+            ref={trigger}
             type="button"
             aria-label="Account"
-            aria-haspopup="menu"
+            aria-controls="account-panel"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             className="rounded-full outline-none focus-visible:shadow-focus-ring"
@@ -100,13 +106,13 @@ export function AppHeader({ onToggleSidebar, user, onSignOut, notice }: { onTogg
             <Avatar initials={user.name.charAt(0).toUpperCase()} />
           </button>
           {open ? (
-            <div role="menu" className="absolute right-0 mt-2 w-56 rounded-lg border border-line bg-card p-1 shadow-md">
+            <div id="account-panel" className="absolute right-0 mt-2 w-56 rounded-lg border border-line bg-card p-1 shadow-md">
               <div className="grid px-2 py-1.5">
                 <span className="truncate type-body-small-strong text-fg">{user.name}</span>
                 <span className="truncate type-meta-caption text-fg3">{user.email}</span>
               </div>
               <div className="-mx-1 my-1 h-px bg-line" />
-              <button role="menuitem" type="button" onClick={onSignOut} className="flex w-full items-center gap-2 rounded-md px-2 py-1.5 type-body-small text-fg outline-none hover:bg-panel focus-visible:bg-panel">
+              <button type="button" onClick={onSignOut} className="flex w-full items-center gap-2 rounded-md px-2 py-1.5 type-body-small text-fg outline-none hover:bg-panel focus-visible:bg-panel">
                 <LogOut aria-hidden className="size-4" />
                 <span>Sign out</span>
               </button>
