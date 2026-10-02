@@ -5,7 +5,7 @@
 - When the owner says it is time to build, confirm the scope with them before touching any code.
 - Design work happens in Figma:
   - Design system (source of truth): https://www.figma.com/design/eDc8PWheV2bcsZ4dRQni1M
-  - App designs (web app, mobile app, landing page, redesigns): see design-profile.md once created.
+  - App designs (web app, mobile app, landing page, redesigns): https://www.figma.com/design/uzZ7B2copJrWqiUhxjKVNH
 - The existing code in this repo (src/, scripts/, design-system/) was an earlier prototype. Leave it untouched until the owner asks to build.
 
 ## Design rules
