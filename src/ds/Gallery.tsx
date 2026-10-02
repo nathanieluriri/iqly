@@ -250,7 +250,7 @@ export default function Gallery({ version }: { version: string }) {
       </Section>
 
       <Section title="Page parts">
-        <PageHeader title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you're ready." />
+        <PageHeader as="h2" title="Wallet" description="Earnings from winning briefs land here. Withdraw to your bank when you're ready." />
         <EmptyState title="No briefs match these filters" body="Try widening your search or clearing some filters." />
         <Pagination page={page} pageCount={8} onPageChange={setPage} />
       </Section>

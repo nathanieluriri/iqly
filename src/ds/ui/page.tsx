@@ -3,20 +3,21 @@ import { ChevronLeft, ChevronRight, Compass } from "lucide-react";
 import { cn } from "../lib/cn";
 import { Button } from "./button";
 
-export function PageHeader({ title, description }: { title: string; description?: string }) {
+export function PageHeader({ title, description, as: Heading = "h1" }: { title: string; description?: string; as?: "h1" | "h2" }) {
   return (
     <div>
-      <h1 className="type-heading-page-title text-fg">{title}</h1>
+      <Heading className="type-heading-page-title text-fg">{title}</Heading>
       {description ? <p className="mt-1 type-body-small text-fg3">{description}</p> : null}
     </div>
   );
 }
 
-export function EmptyState({ title, body, icon }: { title: string; body: string; icon?: ReactNode }) {
+export function EmptyState({ title, body, icon, headingLevel = "p" }: { title: string; body: string; icon?: ReactNode; headingLevel?: "p" | "h1" | "h2" }) {
+  const Title = headingLevel;
   return (
     <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-line py-16 text-center">
       <div className="flex size-12 items-center justify-center rounded-full bg-panel text-fg3">{icon ?? <Compass aria-hidden className="size-5" />}</div>
-      <p className="type-heading-card-section text-fg">{title}</p>
+      <Title className="type-heading-card-section text-fg">{title}</Title>
       <p className="max-w-sm type-body-small text-fg3">{body}</p>
     </div>
   );

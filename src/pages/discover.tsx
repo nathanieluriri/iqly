@@ -38,10 +38,10 @@ export function DiscoverPage() {
     setDraft((d) => (d.trim() === q ? d : q));
   }, [q]);
 
-  // Typing replaces the history entry instead of stacking one per keystroke.
+  // The first search adds one history entry; refining it replaces that entry.
   useEffect(() => {
     const t = window.setTimeout(() => {
-      if (draft.trim() !== q) set("q", draft.trim(), "", true);
+      if (draft.trim() !== q) set("q", draft.trim(), "", q !== "");
     }, 300);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps

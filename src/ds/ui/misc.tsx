@@ -14,7 +14,7 @@ export function Spinner({ className, label = "Loading" }: { className?: string; 
   return <LoaderCircle role="status" aria-label={label} className={cn("size-4 animate-spin text-fg3", className)} />;
 }
 
-export function Tooltip({ content, children, side = "top" }: { content: ReactNode; children: (describedBy: string) => ReactNode; side?: "top" | "bottom" }) {
+export function Tooltip({ content, children, side = "top", align = "center" }: { content: ReactNode; children: (describedBy: string) => ReactNode; side?: "top" | "bottom"; align?: "center" | "start" }) {
   const id = useId();
   const [dismissed, setDismissed] = useState(false);
   return (
@@ -29,8 +29,9 @@ export function Tooltip({ content, children, side = "top" }: { content: ReactNod
         id={id}
         role="tooltip"
         className={cn(
-          "pointer-events-none absolute left-1/2 z-50 hidden w-max max-w-[min(16rem,calc(100vw-2rem))] -translate-x-1/2 rounded-md bg-fg px-3 py-1.5 type-meta-caption text-card group-focus-within/tooltip:block group-hover/tooltip:block",
+          "pointer-events-none absolute z-50 hidden w-max max-w-[min(16rem,calc(100vw-2rem))] rounded-md bg-fg px-3 py-1.5 type-meta-caption text-card group-focus-within/tooltip:block group-hover/tooltip:block",
           side === "top" ? "bottom-full mb-2" : "top-full mt-2",
+          align === "center" ? "left-1/2 -translate-x-1/2" : "-left-1.5",
           dismissed && "group-focus-within/tooltip:hidden group-hover/tooltip:hidden",
         )}
       >

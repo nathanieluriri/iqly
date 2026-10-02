@@ -79,7 +79,7 @@ export function ChallengeCard({ c, href }: { c: Challenge; href: string }) {
           <div>
             <div className="flex items-center gap-1 type-mono-micro text-brand-fg3">
               <span>Reward pool</span>
-              <Tooltip content="Total prize money the brand has funded for this brief. After judging closes, it's split across the top contributors per the brief's winner rules.">
+              <Tooltip align="start" content="Total prize money the brand has funded for this brief. After judging closes, it's split across the top contributors per the brief's winner rules.">
                 {(id) => (
                   <button
                     type="button"

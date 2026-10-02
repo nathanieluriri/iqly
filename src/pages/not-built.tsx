@@ -8,7 +8,7 @@ export function NotBuiltPage({ what, back, backLabel }: { what: string; back: st
       <Link href={back} className={buttonClasses("ghost", "sm", "-ml-2")}>
         <ArrowLeft /> {backLabel}
       </Link>
-      <EmptyState title={`${what} is not in this build yet`} body="This prototype covers the four dashboard pages in design system v1." />
+      <EmptyState headingLevel="h1" title={`${what} is not in this build yet`} body="This prototype covers the four dashboard pages in design system v1." />
     </div>
   );
 }

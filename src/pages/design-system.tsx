@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo } from "react";
+import { lazy, Suspense, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router";
 import { LinkProvider, Logo, PageHeader, Select, Spinner, ToastProvider } from "../ds";
 import CurrentGallery from "../ds/Gallery";
@@ -11,6 +11,9 @@ const archived = import.meta.glob<{ default: React.ComponentType<{ version: stri
 export function DesignSystemPage() {
   const [params, setParams] = useSearchParams();
   const version = (DS_VERSIONS as readonly string[]).includes(params.get("v") ?? "") ? params.get("v")! : DS_CURRENT;
+  useEffect(() => {
+    document.title = `Design system ${version} · iQLY`;
+  }, [version]);
   const Gallery = useMemo(() => {
     if (version === DS_CURRENT) return CurrentGallery;
     const loader = archived[`../ds-archive/${version}/Gallery.tsx`];

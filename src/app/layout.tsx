@@ -28,6 +28,10 @@ export function DashboardLayout() {
   const drawer = useRef<HTMLDivElement>(null);
   const opener = useRef<HTMLElement | null>(null);
   useEffect(() => setMobileOpen(false), [pathname]);
+  useEffect(() => {
+    const page = NAV.find((n) => pathname.startsWith(n.href));
+    document.title = page ? `${page.label} · iQLY` : "iQLY";
+  }, [pathname]);
   const toggle = () => {
     if (window.matchMedia("(min-width: 768px)").matches) setCollapsed((c) => !c);
     else {
