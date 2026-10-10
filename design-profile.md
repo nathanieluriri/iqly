@@ -53,9 +53,9 @@
 - Logos: official files only (public/brand, Figma Logo and Logomark components, the iQLY Business wordmark from apps/brand/public). Never redraw or recolour.
 
 ## Figma
-- Design system file: eDc8PWheV2bcsZ4dRQni1M (pages 📘 Cover, 💠 App, Experimental · mobile, Experimental · landing). Library published by the owner.
+- Design system file: eDc8PWheV2bcsZ4dRQni1M (pages 📘 Cover, 💠 App, Experimental · mobile, Experimental · landing (not approved), Experimental · business (not approved)). Library published by the owner.
 - App file: uzZ7B2copJrWqiUhxjKVNH. Pages: Web app, Mobile app, Landing page (shipped landings and the experimental two-doors landing), Business dashboard (shipped screens and the experimental white dashboard with polls, targeting and activations), Admin app (poll review section added beside the existing admin frames).
-- Pending library page in the App file: local components waiting for the owner to publish (lucide icons, the business wordmark, Exp/Biz and Exp/Land kits). Swap them for library components after publish.
+- Pending library page in the App file: local copies of the lucide icon additions, the business wordmark and the Exp/Biz and Exp/Land kits, used by the business and landing screens until the owner publishes. The same components are already built in the DS file (sections 571:99, 571:100 and 571:101 on Experimental · business; 585:99 on Experimental · landing) with the same names and variants. After publish: swap every App instance to the library component of the same name and variant, then delete the Pending library sections. Exp/Biz HoldButton, StatTile, QuickAction, Stamp, DropZone, Receipt and TierPicker are unused and were not ported.
 - Reference kit (read only): DvFtf4bSjJPTm9qp4j34g8.
 - No-touch zones: the existing admin app frames (not created in these rounds).
 
