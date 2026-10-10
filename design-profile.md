@@ -24,6 +24,7 @@
 ## Known gaps in shipped code (read 10 Oct 2026)
 - Business dashboard: the Total Pool hint says "across all challenges" but the figure counts live and closed challenges only.
 - Legal names differ: the brand declaration says Terms of Use and Community Guidelines; other surfaces say Terms of Service and Code of Conduct.
+- University list: apps/web/src/lib/nigerian-universities.ts holds about 185 names taken from Wikipedia, fewer than the NUC count, so screens say "Search Nigerian universities" without a number.
 - Shipped landings: orange band text 3.47:1, orange eyebrows 2.54:1, #8c7197 meta text 4.13:1 and the "In review" pill 3.08:1 fail 4.5:1. The 390 business header has no link to the contributor site.
 - Business landing claims with no code behind them: "Live in 10 minutes", "100+ targeted takes", "Up to 50%", "48 to 72 hours". Figma mirrors the shipped landings as they are and does not reuse these claims elsewhere.
 
@@ -37,6 +38,7 @@
 - Submission status: Under review (pending, scored), Winner, Not selected (filtered_out).
 - Withdrawal status words shown raw: pending, completed, failed, reversed.
 - Ledger types: "award" confirmed in code; "withdrawal" assumed, TBD against the API enum.
+- Winners: "Publish winners" in the judging panel opens a confirm dialog ("Publish N winners?") that releases the total from escrow into the winners' wallets and notifies every participant; it can't be undone (publish-panel.tsx, confirm-winners-dialog.tsx). Designs use a click to confirm, not press and hold.
 - Proposal vocabulary: poll states Draft, In review, Action needed, Live, Ended; activation claims in the business view To confirm, Needs info, Confirmed, Rejected; submissions table column "Quality score" with "Scoring…" and "Scored"; the reviewer is "iQLY"; challenges count submissions, activations count spots.
 - Banned: em dashes in copy (owner preference). Shipped strings that contain them are rewritten with a period or a comma.
 
