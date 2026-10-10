@@ -23,7 +23,9 @@
 
 ## Known gaps in shipped code (read 10 Oct 2026)
 - Business dashboard: the Total Pool hint says "across all challenges" but the figure counts live and closed challenges only.
-- Legal names differ: the brand declaration says Terms of Use and Community Guidelines; other surfaces say Terms of Service and Code of Conduct.
+- Legal names (owner, 10 Oct): Terms of Service and Code of Conduct everywhere. The brand declaration still says Terms of Use and Community Guidelines in code; designs use the owner's names.
+- Tier and pool are fixed once a challenge is paid (owner, 10 Oct). No upgrades, top-ups or lowering after payment.
+- Business refunds (owner, 10 Oct): unused activation spots and withdrawn paid challenges refund to the business's iQLY credit, which the business can then withdraw.
 - University list: apps/web/src/lib/nigerian-universities.ts holds about 185 names taken from Wikipedia, fewer than the NUC count, so screens say "Search Nigerian universities" without a number.
 - Shipped landings: orange band text 3.47:1, orange eyebrows 2.54:1, #8c7197 meta text 4.13:1 and the "In review" pill 3.08:1 fail 4.5:1. The 390 business header has no link to the contributor site.
 - Business landing claims with no code behind them: "Live in 10 minutes", "100+ targeted takes", "Up to 50%", "48 to 72 hours". Figma mirrors the shipped landings as they are and does not reuse these claims elsewhere.
