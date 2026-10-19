@@ -10756,5 +10756,300 @@
     "1495:49502"
    ]
   }
- ]
+ ],
+ "design_system": {
+  "file": "eDc8PWheV2bcsZ4dRQni1M",
+  "section": "571:101",
+  "kit": [
+   {
+    "id": "576:101",
+    "name": "Exp/Icon · business additions",
+    "path": "design-system/kit/01-icon-business-additions.png",
+    "variance": 1607.6
+   },
+   {
+    "id": "576:164",
+    "name": "Exp/Biz/StatusPill",
+    "path": "design-system/kit/02-status-pill.png",
+    "variance": 546.2
+   },
+   {
+    "id": "576:185",
+    "name": "Exp/Biz/ProgressRing",
+    "path": "design-system/kit/03-progress-ring.png",
+    "variance": 1753.1
+   },
+   {
+    "id": "576:200",
+    "name": "Exp/Biz/NavItem",
+    "path": "design-system/kit/04-nav-item.png",
+    "variance": 517.2
+   },
+   {
+    "id": "576:202",
+    "name": "Exp/Biz/ActionButton",
+    "path": "design-system/kit/05-action-button.png",
+    "variance": 1951.1
+   },
+   {
+    "id": "577:115",
+    "name": "Exp/Biz/SaveButton",
+    "path": "design-system/kit/06-save-button.png",
+    "variance": 11652.8
+   },
+   {
+    "id": "577:139",
+    "name": "Exp/Biz/TargetChip",
+    "path": "design-system/kit/07-target-chip.png",
+    "variance": 1634.1
+   },
+   {
+    "id": "577:169",
+    "name": "Exp/Biz/ReviewNote",
+    "path": "design-system/kit/08-review-note.png",
+    "variance": 963.9
+   },
+   {
+    "id": "577:193",
+    "name": "Exp/Biz/ActionBanner",
+    "path": "design-system/kit/09-action-banner.png",
+    "variance": 1057.1
+   },
+   {
+    "id": "578:191",
+    "name": "Exp/Biz/OptionInput",
+    "path": "design-system/kit/10-option-input.png",
+    "variance": 953.1
+   },
+   {
+    "id": "578:277",
+    "name": "Exp/Biz/PollTypeCard",
+    "path": "design-system/kit/11-poll-type-card.png",
+    "variance": 1860.1
+   },
+   {
+    "id": "580:168",
+    "name": "Exp/Biz/Signature",
+    "path": "design-system/kit/12-signature.png",
+    "variance": 681.4
+   },
+   {
+    "id": "576:110",
+    "name": "Exp/Biz/Avatar",
+    "path": "design-system/kit/13-avatar.png",
+    "variance": 1016.6
+   },
+   {
+    "id": "581:149",
+    "name": "Exp/Biz/ActivationCard",
+    "path": "design-system/kit/14-activation-card.png",
+    "variance": 2567.5
+   },
+   {
+    "id": "581:171",
+    "name": "Exp/Biz/TopBar",
+    "path": "design-system/kit/15-top-bar.png",
+    "variance": 111.8
+   },
+   {
+    "id": "616:1135",
+    "name": "Exp/Biz/Switch",
+    "path": "design-system/kit/17-switch.png",
+    "variance": 3599.3
+   }
+  ],
+  "kit_missing": [
+   {
+    "id": "612:315",
+    "name": "Exp/Biz/TactileButton"
+   },
+   {
+    "id": "616:1240",
+    "name": "Exp/Biz/ActionTile"
+   },
+   {
+    "id": "616:4719",
+    "name": "Exp/Biz/Sidebar"
+   },
+   {
+    "id": "622:382",
+    "name": "Exp/Biz/RailItem"
+   },
+   {
+    "id": "622:627",
+    "name": "Exp/Biz/ResponsesChart"
+   },
+   {
+    "id": "625:324",
+    "name": "Exp/Biz/SummaryCard"
+   },
+   {
+    "id": "625:338",
+    "name": "Exp/Biz/Segment"
+   },
+   {
+    "id": "625:341",
+    "name": "Exp/Biz/LedgerHeader"
+   },
+   {
+    "id": "625:380",
+    "name": "Exp/Biz/LedgerRow"
+   },
+   {
+    "id": "630:360",
+    "name": "Exp/Biz/SortIcon"
+   },
+   {
+    "id": "630:371",
+    "name": "Exp/Biz/FilterChip"
+   },
+   {
+    "id": "630:373",
+    "name": "Exp/Biz/SearchField"
+   },
+   {
+    "id": "633:359",
+    "name": "Exp/Biz/FilterMenuItem"
+   },
+   {
+    "id": "633:360",
+    "name": "Exp/Biz/FilterMenu"
+   },
+   {
+    "id": "633:400",
+    "name": "Exp/Biz/Crumb"
+   },
+   {
+    "id": "636:386",
+    "name": "Exp/Biz/MoreButton"
+   },
+   {
+    "id": "636:395",
+    "name": "Exp/Biz/MenuItem"
+   },
+   {
+    "id": "636:396",
+    "name": "Exp/Biz/ActionMenu"
+   },
+   {
+    "id": "640:399",
+    "name": "Exp/Biz/NextStep"
+   },
+   {
+    "id": "641:415",
+    "name": "Exp/Biz/Stage"
+   },
+   {
+    "id": "647:398",
+    "name": "Exp/Biz/ModeSwitch"
+   },
+   {
+    "id": "647:407",
+    "name": "Exp/Biz/HelpLink"
+   },
+   {
+    "id": "647:408",
+    "name": "Exp/Biz/HelpPopover"
+   },
+   {
+    "id": "649:432",
+    "name": "Exp/Biz/BuilderStep"
+   },
+   {
+    "id": "649:443",
+    "name": "Exp/Biz/DeviceSwitch"
+   },
+   {
+    "id": "649:444",
+    "name": "Exp/Biz/BrowserBar"
+   },
+   {
+    "id": "665:380",
+    "name": "Exp/Biz/WeightCell"
+   },
+   {
+    "id": "665:435",
+    "name": "Exp/Biz/CriterionInput"
+   },
+   {
+    "id": "665:387",
+    "name": "Exp/Biz/ChoiceCard"
+   },
+   {
+    "id": "666:480",
+    "name": "Exp/Biz/CoverUpload"
+   },
+   {
+    "id": "684:428",
+    "name": "Exp/Biz/DeviceChip"
+   },
+   {
+    "id": "684:463",
+    "name": "Exp/Biz/StepInput"
+   },
+   {
+    "id": "684:484",
+    "name": "Exp/Biz/StepReward"
+   },
+   {
+    "id": "695:474",
+    "name": "Exp/Biz/DeviceOption"
+   },
+   {
+    "id": "695:551",
+    "name": "Exp/Biz/DeviceMenu"
+   },
+   {
+    "id": "715:526",
+    "name": "Exp/Biz/SourceTag"
+   },
+   {
+    "id": "721:518",
+    "name": "Exp/Biz/ScoreTap"
+   },
+   {
+    "id": "721:559",
+    "name": "Exp/Biz/ScoreCriterion"
+   },
+   {
+    "id": "721:574",
+    "name": "Exp/Biz/Disclosure"
+   },
+   {
+    "id": "721:594",
+    "name": "Exp/Biz/IconAction"
+   },
+   {
+    "id": "726:556",
+    "name": "Exp/Biz/StepMarker"
+   },
+   {
+    "id": "728:590",
+    "name": "Exp/Biz/MobileTopBar"
+   },
+   {
+    "id": "728:683",
+    "name": "Exp/Biz/MobileTabBar"
+   },
+   {
+    "id": "730:593",
+    "name": "Exp/Biz/LineField"
+   },
+   {
+    "id": "730:602",
+    "name": "Exp/Biz/NextButton"
+   },
+   {
+    "id": "730:614",
+    "name": "Exp/Biz/RadioRow"
+   },
+   {
+    "id": "730:615",
+    "name": "Exp/Biz/PoolSlider"
+   }
+  ],
+  "icons_sheet": null,
+  "tokens": null,
+  "status": "partial: Figma MCP rate limit (Collab seat) hit on 19 Oct after 16 of 63 kit images"
+ }
 }

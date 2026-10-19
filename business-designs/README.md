@@ -855,6 +855,29 @@ Each flow starts at a Figma flow starting point and follows the first unvisited 
 3. [Typing a reply](mobile/06-help-requests/03-n52-typing-a-reply.png)
 4. [Help request sorted](mobile/06-help-requests/04-n53-help-request-sorted.png)
 
+## Design system (partial)
+
+Source: [design system file](https://www.figma.com/design/eDc8PWheV2bcsZ4dRQni1M), kit section `571:101`. 16 of 63 kit images are exported; the Figma MCP tool-call limit for a Collab seat stopped the run. `design-system/kit-nodes.tsv` lists every kit node in export order, and `manifest.json` (`design_system.kit_missing`) lists what is left. The icons sheet (`571:99`) and `tokens.json` are not exported yet.
+
+| Image | Component | Node |
+|---|---|---|
+| design-system/kit/01-icon-business-additions.png | Exp/Icon · business additions | `576:101` |
+| design-system/kit/02-status-pill.png | Exp/Biz/StatusPill | `576:164` |
+| design-system/kit/03-progress-ring.png | Exp/Biz/ProgressRing | `576:185` |
+| design-system/kit/04-nav-item.png | Exp/Biz/NavItem | `576:200` |
+| design-system/kit/05-action-button.png | Exp/Biz/ActionButton | `576:202` |
+| design-system/kit/06-save-button.png | Exp/Biz/SaveButton | `577:115` |
+| design-system/kit/07-target-chip.png | Exp/Biz/TargetChip | `577:139` |
+| design-system/kit/08-review-note.png | Exp/Biz/ReviewNote | `577:169` |
+| design-system/kit/09-action-banner.png | Exp/Biz/ActionBanner | `577:193` |
+| design-system/kit/10-option-input.png | Exp/Biz/OptionInput | `578:191` |
+| design-system/kit/11-poll-type-card.png | Exp/Biz/PollTypeCard | `578:277` |
+| design-system/kit/12-signature.png | Exp/Biz/Signature | `580:168` |
+| design-system/kit/13-avatar.png | Exp/Biz/Avatar | `576:110` |
+| design-system/kit/14-activation-card.png | Exp/Biz/ActivationCard | `581:149` |
+| design-system/kit/15-top-bar.png | Exp/Biz/TopBar | `581:171` |
+| design-system/kit/17-switch.png | Exp/Biz/Switch | `616:1135` |
+
 ## Not exported
 
 - `1040:15364`, builder preview components (no frames).
