@@ -204,15 +204,21 @@ Use this when you describe screens in the index, and treat it as the rules any f
   - **Shortlist:** one queue (To review, Shortlisted, Not considering, Passed). iQLY's reasons sit behind its tag.
   - **Scoring:** criteria fold to one line. Other judges' scores stay hidden until everyone is done (a setting). Score gaps of 4 or more are marked Discuss.
   - **Ties:** a tie is broken with a reason or kept, and the brand tops up when it is kept.
-- **Mobile (390), one consistent look:**
-  - **Page:** grey (`Color/panel`), with content on a 16 px margin.
-  - **Header:** `Exp/Biz/MobileTopBar` has no bar fill and white 44 px round buttons (menu, back, close, "+"). Home and Wallet use the same round buttons with the avatar.
+- **Mobile (390), one consistent look (latest owner decisions, 19 Oct):**
+  - **Page:** white (`Color/card`), with content on a 16 px margin.
+  - **Containers:** every list, group of rows, card and panel is light grey (`Color/secondary`), 20 px corners, 16 px padding, no hairline under the last row. Nothing is grey on grey or white on white.
+  - **Accent:** the dark purple `Color/brand` (#2d0048), never the brighter `Color/primary`. It is used for primary buttons, the Next arrow, links, radios, the slider, chart bars, icons in circles, and the Needs you rings and badges.
+  - **Buttons:** every button is tactile, after `Exp/Biz/TactileButton`.
+    - Grey buttons: `Color/secondary` fill, 1 px `Color/line` edge, and a white inner highlight 1 px from the top. Inside a grey container they turn white.
+    - Purple buttons: `Color/brand` fill, `Color/brand-dark` edge, and a 22% white highlight.
+    - This covers header buttons, Save and Done pills, quick actions, play, send, the judging actions, score taps and chat quick replies.
+  - **Header:** `Exp/Biz/MobileTopBar` has no bar fill and 44 px round tactile buttons (menu, back, close, "+"). Home and Wallet use the same round buttons with the avatar.
   - **Navigation:** the menu opens a "Go to" bottom sheet. There is no bottom tab bar and no side drawer.
-  - **Lists:** every list or group of rows is a white panel (20 px corners, 16 px padding, no hairline under the last row). Cards are white on the grey page.
-  - **Icons:** rows and tiles use plain grey line icons in light grey circles, not illustrations. The `Exp/Figure` people appear only on empty and success states.
-  - **Home:** greeting with the business name, then Needs you as Instagram-style highlights (photo circles with an ink ring, a count badge, a two-line label and a See all circle). Below that, a white quick actions panel (Challenge, Poll, Activation, Wallet), then Last 7 days as one calm panel of rows ending in Stats for quants. Variants cover nothing needs you, no figures yet and a brand new business.
-  - **Wallet:** an ink iQLY credit card with the mono mark stamp and the bulb pattern, the escrow card behind it, and a white "Add bank" pill on the corner. Below it: round quick actions, two tiles, and Recent with View all.
-  - **Create flows:** a Hinge-style stepper, one question per screen. The pieces are `Exp/Biz/StepMarker` dots, an H1 question, `Exp/Biz/LineField` or `Exp/Biz/RadioRow` choices in a white panel, and `Exp/Biz/NextButton`. The last step is "You pay" with one Pay button. Anything not asked is changed after saving the draft.
+  - **Icons:** rows and tiles use line icons in dark purple inside round circles (light grey on the white page, white inside grey containers), not illustrations. The `Exp/Figure` people appear only on empty and success states.
+  - **Home:** greeting with the business name, then Needs you as Instagram-style highlights (photo circles with a dark purple ring, a count badge, a two-line label and a See all circle). Below that, a grey quick actions panel (Challenge, Poll, Activation, Wallet), then Last 7 days as one grey panel of rows ending in Stats for quants. Variants cover nothing needs you, no figures yet and a brand new business.
+  - **Wallet:** a dark purple iQLY credit card with `Logomark/Mono on ink` as a stamp and `Logomark/Bulb` as a faint pattern, the grey escrow card behind it, and a tactile grey "Add bank" pill. The pill has a white ring in the page colour, so it cuts into the card corner. Below it: round quick actions, two tiles, and Recent with View all.
+  - **Judging swipe stack:** a neat pile, with two cards stepping 12 px down and in behind the front card. A long entry scrolls inside the card, with a scroll bar and a fade at the bottom.
+  - **Create flows:** a Hinge-style stepper, one question per screen. The pieces are `Exp/Biz/StepMarker` dots, an H1 question, `Exp/Biz/LineField` or `Exp/Biz/RadioRow` choices in a grey panel, and `Exp/Biz/NextButton`. The last step is "You pay" with one Pay button. Anything not asked is changed after saving the draft.
   - **Filters:** `Exp/Chip` pills, never an "All" option.
   - **Touch and sheets:** taps are at least 44 px. Sheets are white over a 32% scrim.
   - **Help requests:** WhatsApp style. A chat list with search and Open/Resolved pills; a conversation with a pinned claim bar (Reject, Confirm and pay), proof as voice notes, system notes and quick replies. iQLY support steps in after 2 days.
@@ -222,6 +228,8 @@ Use this when you describe screens in the index, and treat it as the rules any f
   - layout like Grey;
   - judging as clear as Greenhouse scorecards;
   - mobile as spacious as Hinge, with Dribbble-style fintech panels.
+
+The desktop screens have not had the white, dark purple and tactile pass yet. Describe them as they are.
 
 ## 5. Report back
 
