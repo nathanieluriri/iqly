@@ -10764,292 +10764,324 @@
    {
     "id": "576:101",
     "name": "Exp/Icon · business additions",
-    "path": "design-system/kit/01-icon-business-additions.png",
-    "variance": 1607.6
+    "path": "design-system/kit/01-icon-business-additions.png"
    },
    {
     "id": "576:164",
     "name": "Exp/Biz/StatusPill",
-    "path": "design-system/kit/02-status-pill.png",
-    "variance": 546.2
+    "path": "design-system/kit/02-status-pill.png"
    },
    {
     "id": "576:185",
     "name": "Exp/Biz/ProgressRing",
-    "path": "design-system/kit/03-progress-ring.png",
-    "variance": 1753.1
+    "path": "design-system/kit/03-progress-ring.png"
    },
    {
     "id": "576:200",
     "name": "Exp/Biz/NavItem",
-    "path": "design-system/kit/04-nav-item.png",
-    "variance": 517.2
+    "path": "design-system/kit/04-nav-item.png"
    },
    {
     "id": "576:202",
     "name": "Exp/Biz/ActionButton",
-    "path": "design-system/kit/05-action-button.png",
-    "variance": 1951.1
+    "path": "design-system/kit/05-action-button.png"
    },
    {
     "id": "577:115",
     "name": "Exp/Biz/SaveButton",
-    "path": "design-system/kit/06-save-button.png",
-    "variance": 11652.8
+    "path": "design-system/kit/06-save-button.png"
    },
    {
     "id": "577:139",
     "name": "Exp/Biz/TargetChip",
-    "path": "design-system/kit/07-target-chip.png",
-    "variance": 1634.1
+    "path": "design-system/kit/07-target-chip.png"
    },
    {
     "id": "577:169",
     "name": "Exp/Biz/ReviewNote",
-    "path": "design-system/kit/08-review-note.png",
-    "variance": 963.9
+    "path": "design-system/kit/08-review-note.png"
    },
    {
     "id": "577:193",
     "name": "Exp/Biz/ActionBanner",
-    "path": "design-system/kit/09-action-banner.png",
-    "variance": 1057.1
+    "path": "design-system/kit/09-action-banner.png"
    },
    {
     "id": "578:191",
     "name": "Exp/Biz/OptionInput",
-    "path": "design-system/kit/10-option-input.png",
-    "variance": 953.1
+    "path": "design-system/kit/10-option-input.png"
    },
    {
     "id": "578:277",
     "name": "Exp/Biz/PollTypeCard",
-    "path": "design-system/kit/11-poll-type-card.png",
-    "variance": 1860.1
+    "path": "design-system/kit/11-poll-type-card.png"
    },
    {
     "id": "580:168",
     "name": "Exp/Biz/Signature",
-    "path": "design-system/kit/12-signature.png",
-    "variance": 681.4
+    "path": "design-system/kit/12-signature.png"
    },
    {
     "id": "576:110",
     "name": "Exp/Biz/Avatar",
-    "path": "design-system/kit/13-avatar.png",
-    "variance": 1016.6
+    "path": "design-system/kit/13-avatar.png"
    },
    {
     "id": "581:149",
     "name": "Exp/Biz/ActivationCard",
-    "path": "design-system/kit/14-activation-card.png",
-    "variance": 2567.5
+    "path": "design-system/kit/14-activation-card.png"
    },
    {
     "id": "581:171",
     "name": "Exp/Biz/TopBar",
-    "path": "design-system/kit/15-top-bar.png",
-    "variance": 111.8
+    "path": "design-system/kit/15-top-bar.png"
+   },
+   {
+    "id": "612:315",
+    "name": "Exp/Biz/TactileButton",
+    "path": "design-system/kit/16-tactile-button.png"
    },
    {
     "id": "616:1135",
     "name": "Exp/Biz/Switch",
-    "path": "design-system/kit/17-switch.png",
-    "variance": 3599.3
-   }
-  ],
-  "kit_missing": [
-   {
-    "id": "612:315",
-    "name": "Exp/Biz/TactileButton"
+    "path": "design-system/kit/17-switch.png"
    },
    {
     "id": "616:1240",
-    "name": "Exp/Biz/ActionTile"
+    "name": "Exp/Biz/ActionTile",
+    "path": "design-system/kit/18-action-tile.png"
    },
    {
     "id": "616:4719",
-    "name": "Exp/Biz/Sidebar"
+    "name": "Exp/Biz/Sidebar",
+    "path": "design-system/kit/19-sidebar.png"
    },
    {
     "id": "622:382",
-    "name": "Exp/Biz/RailItem"
+    "name": "Exp/Biz/RailItem",
+    "path": "design-system/kit/20-rail-item.png"
    },
    {
     "id": "622:627",
-    "name": "Exp/Biz/ResponsesChart"
+    "name": "Exp/Biz/ResponsesChart",
+    "path": "design-system/kit/21-responses-chart.png"
    },
    {
     "id": "625:324",
-    "name": "Exp/Biz/SummaryCard"
+    "name": "Exp/Biz/SummaryCard",
+    "path": "design-system/kit/22-summary-card.png"
    },
    {
     "id": "625:338",
-    "name": "Exp/Biz/Segment"
+    "name": "Exp/Biz/Segment",
+    "path": "design-system/kit/23-segment.png"
    },
    {
     "id": "625:341",
-    "name": "Exp/Biz/LedgerHeader"
+    "name": "Exp/Biz/LedgerHeader",
+    "path": "design-system/kit/24-ledger-header.png"
    },
    {
     "id": "625:380",
-    "name": "Exp/Biz/LedgerRow"
+    "name": "Exp/Biz/LedgerRow",
+    "path": "design-system/kit/25-ledger-row.png"
    },
    {
     "id": "630:360",
-    "name": "Exp/Biz/SortIcon"
+    "name": "Exp/Biz/SortIcon",
+    "path": "design-system/kit/26-sort-icon.png"
    },
    {
     "id": "630:371",
-    "name": "Exp/Biz/FilterChip"
+    "name": "Exp/Biz/FilterChip",
+    "path": "design-system/kit/27-filter-chip.png"
    },
    {
     "id": "630:373",
-    "name": "Exp/Biz/SearchField"
+    "name": "Exp/Biz/SearchField",
+    "path": "design-system/kit/28-search-field.png"
    },
    {
     "id": "633:359",
-    "name": "Exp/Biz/FilterMenuItem"
+    "name": "Exp/Biz/FilterMenuItem",
+    "path": "design-system/kit/29-filter-menu-item.png"
    },
    {
     "id": "633:360",
-    "name": "Exp/Biz/FilterMenu"
+    "name": "Exp/Biz/FilterMenu",
+    "path": "design-system/kit/30-filter-menu.png"
    },
    {
     "id": "633:400",
-    "name": "Exp/Biz/Crumb"
+    "name": "Exp/Biz/Crumb",
+    "path": "design-system/kit/31-crumb.png"
    },
    {
     "id": "636:386",
-    "name": "Exp/Biz/MoreButton"
+    "name": "Exp/Biz/MoreButton",
+    "path": "design-system/kit/32-more-button.png"
    },
    {
     "id": "636:395",
-    "name": "Exp/Biz/MenuItem"
+    "name": "Exp/Biz/MenuItem",
+    "path": "design-system/kit/33-menu-item.png"
    },
    {
     "id": "636:396",
-    "name": "Exp/Biz/ActionMenu"
+    "name": "Exp/Biz/ActionMenu",
+    "path": "design-system/kit/34-action-menu.png"
    },
    {
     "id": "640:399",
-    "name": "Exp/Biz/NextStep"
+    "name": "Exp/Biz/NextStep",
+    "path": "design-system/kit/35-next-step.png"
    },
    {
     "id": "641:415",
-    "name": "Exp/Biz/Stage"
+    "name": "Exp/Biz/Stage",
+    "path": "design-system/kit/36-stage.png"
    },
    {
     "id": "647:398",
-    "name": "Exp/Biz/ModeSwitch"
+    "name": "Exp/Biz/ModeSwitch",
+    "path": "design-system/kit/37-mode-switch.png"
    },
    {
     "id": "647:407",
-    "name": "Exp/Biz/HelpLink"
+    "name": "Exp/Biz/HelpLink",
+    "path": "design-system/kit/38-help-link.png"
    },
    {
     "id": "647:408",
-    "name": "Exp/Biz/HelpPopover"
+    "name": "Exp/Biz/HelpPopover",
+    "path": "design-system/kit/39-help-popover.png"
    },
    {
     "id": "649:432",
-    "name": "Exp/Biz/BuilderStep"
+    "name": "Exp/Biz/BuilderStep",
+    "path": "design-system/kit/40-builder-step.png"
    },
    {
     "id": "649:443",
-    "name": "Exp/Biz/DeviceSwitch"
+    "name": "Exp/Biz/DeviceSwitch",
+    "path": "design-system/kit/41-device-switch.png"
    },
    {
     "id": "649:444",
-    "name": "Exp/Biz/BrowserBar"
+    "name": "Exp/Biz/BrowserBar",
+    "path": "design-system/kit/42-browser-bar.png"
    },
    {
     "id": "665:380",
-    "name": "Exp/Biz/WeightCell"
+    "name": "Exp/Biz/WeightCell",
+    "path": "design-system/kit/43-weight-cell.png"
    },
    {
     "id": "665:435",
-    "name": "Exp/Biz/CriterionInput"
+    "name": "Exp/Biz/CriterionInput",
+    "path": "design-system/kit/44-criterion-input.png"
    },
    {
     "id": "665:387",
-    "name": "Exp/Biz/ChoiceCard"
+    "name": "Exp/Biz/ChoiceCard",
+    "path": "design-system/kit/45-choice-card.png"
    },
    {
     "id": "666:480",
-    "name": "Exp/Biz/CoverUpload"
+    "name": "Exp/Biz/CoverUpload",
+    "path": "design-system/kit/46-cover-upload.png"
    },
    {
     "id": "684:428",
-    "name": "Exp/Biz/DeviceChip"
+    "name": "Exp/Biz/DeviceChip",
+    "path": "design-system/kit/47-device-chip.png"
    },
    {
     "id": "684:463",
-    "name": "Exp/Biz/StepInput"
+    "name": "Exp/Biz/StepInput",
+    "path": "design-system/kit/48-step-input.png"
    },
    {
     "id": "684:484",
-    "name": "Exp/Biz/StepReward"
+    "name": "Exp/Biz/StepReward",
+    "path": "design-system/kit/49-step-reward.png"
    },
    {
     "id": "695:474",
-    "name": "Exp/Biz/DeviceOption"
+    "name": "Exp/Biz/DeviceOption",
+    "path": "design-system/kit/50-device-option.png"
    },
    {
     "id": "695:551",
-    "name": "Exp/Biz/DeviceMenu"
+    "name": "Exp/Biz/DeviceMenu",
+    "path": "design-system/kit/51-device-menu.png"
    },
    {
     "id": "715:526",
-    "name": "Exp/Biz/SourceTag"
+    "name": "Exp/Biz/SourceTag",
+    "path": "design-system/kit/52-source-tag.png"
    },
    {
     "id": "721:518",
-    "name": "Exp/Biz/ScoreTap"
+    "name": "Exp/Biz/ScoreTap",
+    "path": "design-system/kit/53-score-tap.png"
    },
    {
     "id": "721:559",
-    "name": "Exp/Biz/ScoreCriterion"
+    "name": "Exp/Biz/ScoreCriterion",
+    "path": "design-system/kit/54-score-criterion.png"
    },
    {
     "id": "721:574",
-    "name": "Exp/Biz/Disclosure"
+    "name": "Exp/Biz/Disclosure",
+    "path": "design-system/kit/55-disclosure.png"
    },
    {
     "id": "721:594",
-    "name": "Exp/Biz/IconAction"
+    "name": "Exp/Biz/IconAction",
+    "path": "design-system/kit/56-icon-action.png"
    },
    {
     "id": "726:556",
-    "name": "Exp/Biz/StepMarker"
+    "name": "Exp/Biz/StepMarker",
+    "path": "design-system/kit/57-step-marker.png"
    },
    {
     "id": "728:590",
-    "name": "Exp/Biz/MobileTopBar"
+    "name": "Exp/Biz/MobileTopBar",
+    "path": "design-system/kit/58-mobile-top-bar.png"
    },
    {
     "id": "728:683",
-    "name": "Exp/Biz/MobileTabBar"
+    "name": "Exp/Biz/MobileTabBar",
+    "path": "design-system/kit/59-mobile-tab-bar.png"
    },
    {
     "id": "730:593",
-    "name": "Exp/Biz/LineField"
+    "name": "Exp/Biz/LineField",
+    "path": "design-system/kit/60-line-field.png"
    },
    {
     "id": "730:602",
-    "name": "Exp/Biz/NextButton"
+    "name": "Exp/Biz/NextButton",
+    "path": "design-system/kit/61-next-button.png"
    },
    {
     "id": "730:614",
-    "name": "Exp/Biz/RadioRow"
+    "name": "Exp/Biz/RadioRow",
+    "path": "design-system/kit/62-radio-row.png"
    },
    {
     "id": "730:615",
-    "name": "Exp/Biz/PoolSlider"
+    "name": "Exp/Biz/PoolSlider",
+    "path": "design-system/kit/63-pool-slider.png"
    }
   ],
-  "icons_sheet": null,
-  "tokens": null,
-  "status": "partial: Figma MCP rate limit (Collab seat) hit on 19 Oct after 16 of 63 kit images"
+  "icons_sheet": {
+   "id": "571:99",
+   "path": "design-system/icons-sheet.png"
+  },
+  "tokens": "design-system/tokens.json",
+  "contact_sheet": "contact-sheets/design-system-kit.jpg"
  }
 }

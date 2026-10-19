@@ -855,32 +855,89 @@ Each flow starts at a Figma flow starting point and follows the first unvisited 
 3. [Typing a reply](mobile/06-help-requests/03-n52-typing-a-reply.png)
 4. [Help request sorted](mobile/06-help-requests/04-n53-help-request-sorted.png)
 
-## Design system (partial)
+## Design system
 
-Source: [design system file](https://www.figma.com/design/eDc8PWheV2bcsZ4dRQni1M), kit section `571:101`. 16 of 63 kit images are exported; the Figma MCP tool-call limit for a Collab seat stopped the run. `design-system/kit-nodes.tsv` lists every kit node in export order, and `manifest.json` (`design_system.kit_missing`) lists what is left. The icons sheet (`571:99`) and `tokens.json` are not exported yet.
+Source: [design system file](https://www.figma.com/design/eDc8PWheV2bcsZ4dRQni1M), page "Experimental · business" (`566:99`).
+
+- **Kit:** 63 images from section `571:101`, one per component set or standalone component, in canvas order. Overview: [contact-sheets/design-system-kit.jpg](contact-sheets/design-system-kit.jpg). `design-system/kit-nodes.tsv` lists the node ids.
+- **Icons:** [design-system/icons-sheet.png](design-system/icons-sheet.png), section `571:99` (lucide additions, pending review).
+- **Tokens:** [design-system/tokens.json](design-system/tokens.json), read from the file's local variables and styles:
+  - Primitives: the raw palette (purple, orange, cream, neutral, emerald, amber, red, blue, plus alpha steps).
+  - Color: semantic tokens as aliases (for example Color/panel #f5f5f5, Color/card #ffffff, Color/secondary #f4f4f5, Color/primary #7128a5, Color/brand #2d0048, Color/brand-dark #1d0033). `resolvedColor` gives each one's hex.
+  - Spacing & Radius: Space/0-5 to Space/16 (2 to 64 px) and Radius/sm 6 to Radius/2xl 18, Radius/full 999.
+  - Effect styles: Shadow/xs, sm, md, lg and the two focus rings.
+  - Text styles: Plus Jakarta Sans for UI, Geist Mono for labels and ledger types (business styles listed).
+  - Avatar: the palette for the avatar builder.
+- Small items without their own image: the 4 Exp/Illus action illustrations, the 14 Exp/Illus/KPI drawings and single icons placed loose in the kit section.
 
 | Image | Component | Node |
 |---|---|---|
-| design-system/kit/01-icon-business-additions.png | Exp/Icon · business additions | `576:101` |
-| design-system/kit/02-status-pill.png | Exp/Biz/StatusPill | `576:164` |
-| design-system/kit/03-progress-ring.png | Exp/Biz/ProgressRing | `576:185` |
-| design-system/kit/04-nav-item.png | Exp/Biz/NavItem | `576:200` |
-| design-system/kit/05-action-button.png | Exp/Biz/ActionButton | `576:202` |
-| design-system/kit/06-save-button.png | Exp/Biz/SaveButton | `577:115` |
-| design-system/kit/07-target-chip.png | Exp/Biz/TargetChip | `577:139` |
-| design-system/kit/08-review-note.png | Exp/Biz/ReviewNote | `577:169` |
-| design-system/kit/09-action-banner.png | Exp/Biz/ActionBanner | `577:193` |
-| design-system/kit/10-option-input.png | Exp/Biz/OptionInput | `578:191` |
-| design-system/kit/11-poll-type-card.png | Exp/Biz/PollTypeCard | `578:277` |
-| design-system/kit/12-signature.png | Exp/Biz/Signature | `580:168` |
-| design-system/kit/13-avatar.png | Exp/Biz/Avatar | `576:110` |
-| design-system/kit/14-activation-card.png | Exp/Biz/ActivationCard | `581:149` |
-| design-system/kit/15-top-bar.png | Exp/Biz/TopBar | `581:171` |
-| design-system/kit/17-switch.png | Exp/Biz/Switch | `616:1135` |
+| [01-icon-business-additions.png](design-system/kit/01-icon-business-additions.png) | Exp/Icon · business additions | `576:101` |
+| [02-status-pill.png](design-system/kit/02-status-pill.png) | Exp/Biz/StatusPill | `576:164` |
+| [03-progress-ring.png](design-system/kit/03-progress-ring.png) | Exp/Biz/ProgressRing | `576:185` |
+| [04-nav-item.png](design-system/kit/04-nav-item.png) | Exp/Biz/NavItem | `576:200` |
+| [05-action-button.png](design-system/kit/05-action-button.png) | Exp/Biz/ActionButton | `576:202` |
+| [06-save-button.png](design-system/kit/06-save-button.png) | Exp/Biz/SaveButton | `577:115` |
+| [07-target-chip.png](design-system/kit/07-target-chip.png) | Exp/Biz/TargetChip | `577:139` |
+| [08-review-note.png](design-system/kit/08-review-note.png) | Exp/Biz/ReviewNote | `577:169` |
+| [09-action-banner.png](design-system/kit/09-action-banner.png) | Exp/Biz/ActionBanner | `577:193` |
+| [10-option-input.png](design-system/kit/10-option-input.png) | Exp/Biz/OptionInput | `578:191` |
+| [11-poll-type-card.png](design-system/kit/11-poll-type-card.png) | Exp/Biz/PollTypeCard | `578:277` |
+| [12-signature.png](design-system/kit/12-signature.png) | Exp/Biz/Signature | `580:168` |
+| [13-avatar.png](design-system/kit/13-avatar.png) | Exp/Biz/Avatar | `576:110` |
+| [14-activation-card.png](design-system/kit/14-activation-card.png) | Exp/Biz/ActivationCard | `581:149` |
+| [15-top-bar.png](design-system/kit/15-top-bar.png) | Exp/Biz/TopBar | `581:171` |
+| [16-tactile-button.png](design-system/kit/16-tactile-button.png) | Exp/Biz/TactileButton | `612:315` |
+| [17-switch.png](design-system/kit/17-switch.png) | Exp/Biz/Switch | `616:1135` |
+| [18-action-tile.png](design-system/kit/18-action-tile.png) | Exp/Biz/ActionTile | `616:1240` |
+| [19-sidebar.png](design-system/kit/19-sidebar.png) | Exp/Biz/Sidebar | `616:4719` |
+| [20-rail-item.png](design-system/kit/20-rail-item.png) | Exp/Biz/RailItem | `622:382` |
+| [21-responses-chart.png](design-system/kit/21-responses-chart.png) | Exp/Biz/ResponsesChart | `622:627` |
+| [22-summary-card.png](design-system/kit/22-summary-card.png) | Exp/Biz/SummaryCard | `625:324` |
+| [23-segment.png](design-system/kit/23-segment.png) | Exp/Biz/Segment | `625:338` |
+| [24-ledger-header.png](design-system/kit/24-ledger-header.png) | Exp/Biz/LedgerHeader | `625:341` |
+| [25-ledger-row.png](design-system/kit/25-ledger-row.png) | Exp/Biz/LedgerRow | `625:380` |
+| [26-sort-icon.png](design-system/kit/26-sort-icon.png) | Exp/Biz/SortIcon | `630:360` |
+| [27-filter-chip.png](design-system/kit/27-filter-chip.png) | Exp/Biz/FilterChip | `630:371` |
+| [28-search-field.png](design-system/kit/28-search-field.png) | Exp/Biz/SearchField | `630:373` |
+| [29-filter-menu-item.png](design-system/kit/29-filter-menu-item.png) | Exp/Biz/FilterMenuItem | `633:359` |
+| [30-filter-menu.png](design-system/kit/30-filter-menu.png) | Exp/Biz/FilterMenu | `633:360` |
+| [31-crumb.png](design-system/kit/31-crumb.png) | Exp/Biz/Crumb | `633:400` |
+| [32-more-button.png](design-system/kit/32-more-button.png) | Exp/Biz/MoreButton | `636:386` |
+| [33-menu-item.png](design-system/kit/33-menu-item.png) | Exp/Biz/MenuItem | `636:395` |
+| [34-action-menu.png](design-system/kit/34-action-menu.png) | Exp/Biz/ActionMenu | `636:396` |
+| [35-next-step.png](design-system/kit/35-next-step.png) | Exp/Biz/NextStep | `640:399` |
+| [36-stage.png](design-system/kit/36-stage.png) | Exp/Biz/Stage | `641:415` |
+| [37-mode-switch.png](design-system/kit/37-mode-switch.png) | Exp/Biz/ModeSwitch | `647:398` |
+| [38-help-link.png](design-system/kit/38-help-link.png) | Exp/Biz/HelpLink | `647:407` |
+| [39-help-popover.png](design-system/kit/39-help-popover.png) | Exp/Biz/HelpPopover | `647:408` |
+| [40-builder-step.png](design-system/kit/40-builder-step.png) | Exp/Biz/BuilderStep | `649:432` |
+| [41-device-switch.png](design-system/kit/41-device-switch.png) | Exp/Biz/DeviceSwitch | `649:443` |
+| [42-browser-bar.png](design-system/kit/42-browser-bar.png) | Exp/Biz/BrowserBar | `649:444` |
+| [43-weight-cell.png](design-system/kit/43-weight-cell.png) | Exp/Biz/WeightCell | `665:380` |
+| [44-criterion-input.png](design-system/kit/44-criterion-input.png) | Exp/Biz/CriterionInput | `665:435` |
+| [45-choice-card.png](design-system/kit/45-choice-card.png) | Exp/Biz/ChoiceCard | `665:387` |
+| [46-cover-upload.png](design-system/kit/46-cover-upload.png) | Exp/Biz/CoverUpload | `666:480` |
+| [47-device-chip.png](design-system/kit/47-device-chip.png) | Exp/Biz/DeviceChip | `684:428` |
+| [48-step-input.png](design-system/kit/48-step-input.png) | Exp/Biz/StepInput | `684:463` |
+| [49-step-reward.png](design-system/kit/49-step-reward.png) | Exp/Biz/StepReward | `684:484` |
+| [50-device-option.png](design-system/kit/50-device-option.png) | Exp/Biz/DeviceOption | `695:474` |
+| [51-device-menu.png](design-system/kit/51-device-menu.png) | Exp/Biz/DeviceMenu | `695:551` |
+| [52-source-tag.png](design-system/kit/52-source-tag.png) | Exp/Biz/SourceTag | `715:526` |
+| [53-score-tap.png](design-system/kit/53-score-tap.png) | Exp/Biz/ScoreTap | `721:518` |
+| [54-score-criterion.png](design-system/kit/54-score-criterion.png) | Exp/Biz/ScoreCriterion | `721:559` |
+| [55-disclosure.png](design-system/kit/55-disclosure.png) | Exp/Biz/Disclosure | `721:574` |
+| [56-icon-action.png](design-system/kit/56-icon-action.png) | Exp/Biz/IconAction | `721:594` |
+| [57-step-marker.png](design-system/kit/57-step-marker.png) | Exp/Biz/StepMarker | `726:556` |
+| [58-mobile-top-bar.png](design-system/kit/58-mobile-top-bar.png) | Exp/Biz/MobileTopBar | `728:590` |
+| [59-mobile-tab-bar.png](design-system/kit/59-mobile-tab-bar.png) | Exp/Biz/MobileTabBar | `728:683` |
+| [60-line-field.png](design-system/kit/60-line-field.png) | Exp/Biz/LineField | `730:593` |
+| [61-next-button.png](design-system/kit/61-next-button.png) | Exp/Biz/NextButton | `730:602` |
+| [62-radio-row.png](design-system/kit/62-radio-row.png) | Exp/Biz/RadioRow | `730:614` |
+| [63-pool-slider.png](design-system/kit/63-pool-slider.png) | Exp/Biz/PoolSlider | `730:615` |
 
 ## Not exported
 
 - `1040:15364`, builder preview components (no frames).
 - The Archive page `1:6` (retired work).
 - Row notes are text, so they are in this index and the manifest, not images.
-- Design system kit images and `tokens.json`: the Figma API rate-limited the design system file for this token, and the variables endpoint needs an Enterprise plan. Use the [design system file](https://www.figma.com/design/eDc8PWheV2bcsZ4dRQni1M) directly.
