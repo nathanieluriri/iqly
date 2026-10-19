@@ -1,4 +1,4 @@
-# Pending Figma edits (blocked by the Figma MCP rate limit on 19 Oct)
+# Figma edits that were blocked by the rate limit on 19 Oct (applied the same day)
 
 Run each script with `mcp__Figma__use_figma` on file `uzZ7B2copJrWqiUhxjKVNH` (skillNames `figma-use`), in order. After each script, check the result with `get_screenshot` on the nodes named in its heading. Scripts 1 and 2 have not been run yet; script 2 also needs a screenshot check because the entry card's inner layout was not re-read before writing it.
 
