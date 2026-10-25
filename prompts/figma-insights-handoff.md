@@ -30,16 +30,32 @@ From the owner's 23 Oct comments:
      - I3 `2132:72090` Breakdown tab: bird's-eye view by place, age band, gender, new to Orchid vs used before. All groups foot to 41 entries. Scored-only and compare-groups chips.
      - I4 `2133:71738` Highlights tab: sentiment segments (All 14, Positive 9, Negative 3, Neutral 2), quote cards with tags, Export highlights button.
      - I5 `2133:72113` Tags tab: intelligent tags (iQLY suggested vs yours), quick search, matching entries as EntryCard instances.
-     - I6 `2133:72523` Ask tab, empty state, built like the owner's chat references: a Threads container (plus button, search, "Last 7 days", thread rows) beside a Chat container (header, divider, official iQLY logomark, greeting, large composer with Ask, Attach, scope pill and an up-arrow Send).
-     - I7 `2144:72854` Ask tab with a conversation: selected thread, right-aligned question, iQLY answer card with sources, composer docked at the bottom.
-     - I8 `2144:73076` Summary tab with the chat docked on the right as its own container: "New chat" header with chevron, edit and close icons, logomark, greeting, three suggestion cards, composer low in the panel.
-   - Shared header on I2 to I7: breadcrumb, title, StatusPill, filter chips (Place, Age band, Gender, Poll answer), tabs Summary, Breakdown, Highlights, Tags, Ask. Tabs are cloned from J13 (active tab has a 2px bottom stroke in Color/fg).
+     - I6 `2144:73076` Summary tab with the iQLY Cowork panel docked on the right as its own container (see Cowork below).
+   - I1 to I5 carry an iQLY Cowork button at top right (it opens the docked panel).
+   - Shared header on I2 to I5: breadcrumb, title, StatusPill, filter chips (Place, Age band, Gender, Poll answer), tabs Summary, Breakdown, Highlights, Tags (Ask is no longer a tab). Tabs are cloned from J13 (active tab has a 2px bottom stroke in Color/fg).
 2. **Judging section** (`1693:76766`):
    - J2 `1385:45580`: single judge (judge list removed), Shortlisted and Not shortlisted groups, an Auto-score button in the toolbar, "Open insights" button in the head. Summary and trends now live in Insights.
    - J6 `1392:97297`: selection toolbar (Positive, Negative, Neutral, Tag), highlighted phrases in the entry text (green and red underline), tags row (blue is iQLY suggested, grey is yours), highlight count, Auto-score banner in the score panel.
    - J13 `1703:79516`: "View insights" button in the head actions.
    - J14 `2134:225758` (new, right of the last judging frame): Auto-score dialog. Options are score the 23 waiting, re-score all, skip flagged. Shows the three criteria and weights, states that the judge stays in control and nothing is shortlisted or published automatically. The dialog and scrim are absolutely positioned children; a frame screenshot may omit them, a screenshot of the dialog node itself (`2134:225823`) shows it.
 3. **Activations**: step 4 Review and pay `1050:17371` has a new card "Add a challenge for finishers" (switch plus challenge picker). The comment was on `1287:90374`, a withdrawn reference frame, so the card was added to the main step 4 frame instead.
+
+### iQLY Cowork (assistant) and the highlight and tag flow, 25 Oct 2026
+
+The owner's rule: the assistant is not a tab. It is its own page (sidebar item `nav · Cowork`, logomark icon, added to both sidebar variants) and a panel that docks to the right of any page from a top-right "iQLY Cowork" button. Containers are separated by layered fills (page Color/panel, containers Color/card, inner cards Color/panel) plus a thin Color/line border, not by strokes alone. Official logomark only (instance of the sidebar logomark component).
+
+- Section `iQLY Cowork · experimental (proposal) · Desktop 1440` (`2153:77101`):
+  - C1 `2153:77102` empty chat page: Threads and Chat containers, greeting, starter prompts, composer.
+  - C2 `2153:77409` the owner's prompt "Highlight every mention of ginger as positive, tag those entries, flag names too long to say"; Cowork answers with a 3-step plan, a preview, and Apply 24 changes, Review each first, Cancel. Nothing changes until applied; Cowork never edits the user's own highlights and tags.
+- Judging section, text selection flow on entry J6 (all with the selection shown as a filled run of text, toolbar anchored above it):
+  - J6 `1392:97297` saved highlights (green positive, red negative) and tags (blue iQLY suggested, grey yours).
+  - J6b `2149:76654` text selected: toolbar Highlight, Tag, Ask Cowork.
+  - J6c `2149:77072` Highlight chosen: "How does this read?" Positive, Negative, Neutral (none preselected, to avoid bias), and "Let Cowork decide".
+  - J6d `2149:77510` Tag chosen: search or create, iQLY suggestions, the user's own tags, "Let Cowork suggest".
+  - J6e `2154:77189` (width 1856) the Cowork panel docked on the entry: the user asks for highlights and tags on this entry, Cowork adds them. Cowork additions have a dashed outline and its logo; Keep all and Undo.
+- Built on a passage made of one text node per word in a wrapping auto-layout so selections and highlights are real shapes behind the words. Reuse that technique for any text highlighting design.
+
+Gauntlet notes: two rounds with two blind critics (containerization and Cowork chat; highlight and tag flow). Findings fixed: plan button overstated scope (now 24 changes), highlight counts disagreed (now 14 = 9 + 3 + 2), old "Ask your data" labels, composer width mismatch, clipped buttons in popovers, sentiment preselected, popovers too tall (now compact). Known remaining: the caret on popovers is subtle, popovers still cover some text below the selection, the passage selection is a design device (no text-range API in Figma), no per-mark undo on a mark (only Undo for all Cowork changes), the J6 sidebar shows the Cowork item but J6 frames still use older sidebar overrides.
 
 ## Comment ledger (file `uzZ7B2copJrWqiUhxjKVNH`)
 
@@ -67,7 +83,7 @@ All threads are left unresolved for the owner to resolve after review.
 
 - Is the Summary a paid feature? Tentative summary before winners and final summary after are shown for every challenge. Gating (Pro vs Free) is undecided.
 - The icon library has no paperclip, X, chevron-down or up-arrow, so the chat reuses Icon/plus (rotated 45 degrees for close), Icon/chevron-up (rotated for down) and Icon/arrow-up-right (rotated for send). Replace with proper icons when added to the kit.
-- Mobile Insights is not designed. Desktop 1440 only.
+- Mobile Insights and mobile Cowork are not designed. Desktop 1440 only.
 - Insights overview rows for polls and activations show only their own counts. Their detail pages are not designed.
 - Auto-score: the real scoring rules, a badge component for auto-scored marks and the error state are not designed.
 - EntryCard instances in I5 show "Not scored" because the proposal component has no score prop. Add a score prop to `Exp/Biz/EntryCard (proposal)` (`1695:76771`) and sync it to the design system.
