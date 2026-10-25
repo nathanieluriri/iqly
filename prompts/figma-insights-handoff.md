@@ -30,9 +30,10 @@ From the owner's 23 Oct comments:
      - I3 `2132:72090` Breakdown tab: bird's-eye view by place, age band, gender, new to Orchid vs used before. All groups foot to 41 entries. Scored-only and compare-groups chips.
      - I4 `2133:71738` Highlights tab: sentiment segments (All 14, Positive 9, Negative 3, Neutral 2), quote cards with tags, Export highlights button.
      - I5 `2133:72113` Tags tab: intelligent tags (iQLY suggested vs yours), quick search, matching entries as EntryCard instances.
-     - I6 `2133:72523` Ask tab, empty state: centered iQLY mark, greeting, three suggested questions and a large composer (Ask and Attach chips, scope pill, Send). Layout follows the owner's chat reference screenshots.
-     - I7 `2141:72531` Ask tab with an answer: question bubble, cited answer, suggestions, scope card. Not yet restyled to match I6.
-   - Shared header on I2 to I6: breadcrumb, title, StatusPill, filter chips (Place, Age band, Gender, Poll answer), tabs Summary, Breakdown, Highlights, Tags, Ask. Tabs are cloned from J13 (active tab has a 2px bottom stroke in Color/fg).
+     - I6 `2133:72523` Ask tab, empty state, built like the owner's chat references: a Threads container (plus button, search, "Last 7 days", thread rows) beside a Chat container (header, divider, official iQLY logomark, greeting, large composer with Ask, Attach, scope pill and an up-arrow Send).
+     - I7 `2144:72854` Ask tab with a conversation: selected thread, right-aligned question, iQLY answer card with sources, composer docked at the bottom.
+     - I8 `2144:73076` Summary tab with the chat docked on the right as its own container: "New chat" header with chevron, edit and close icons, logomark, greeting, three suggestion cards, composer low in the panel.
+   - Shared header on I2 to I7: breadcrumb, title, StatusPill, filter chips (Place, Age band, Gender, Poll answer), tabs Summary, Breakdown, Highlights, Tags, Ask. Tabs are cloned from J13 (active tab has a 2px bottom stroke in Color/fg).
 2. **Judging section** (`1693:76766`):
    - J2 `1385:45580`: single judge (judge list removed), Shortlisted and Not shortlisted groups, an Auto-score button in the toolbar, "Open insights" button in the head. Summary and trends now live in Insights.
    - J6 `1392:97297`: selection toolbar (Positive, Negative, Neutral, Tag), highlighted phrases in the entry text (green and red underline), tags row (blue is iQLY suggested, grey is yours), highlight count, Auto-score banner in the score panel.
@@ -65,7 +66,7 @@ All threads are left unresolved for the owner to resolve after review.
 ## Open items and decisions for the owner
 
 - Is the Summary a paid feature? Tentative summary before winners and final summary after are shown for every challenge. Gating (Pro vs Free) is undecided.
-- The Attach control is a FilterChip, so it shows a chevron. Use a plain attach button when one exists.
+- The icon library has no paperclip, X, chevron-down or up-arrow, so the chat reuses Icon/plus (rotated 45 degrees for close), Icon/chevron-up (rotated for down) and Icon/arrow-up-right (rotated for send). Replace with proper icons when added to the kit.
 - Mobile Insights is not designed. Desktop 1440 only.
 - Insights overview rows for polls and activations show only their own counts. Their detail pages are not designed.
 - Auto-score: the real scoring rules, a badge component for auto-scored marks and the error state are not designed.
@@ -83,3 +84,7 @@ Each `use_figma` call is a fresh scope, so paste the helpers again: load Variabl
 
 - Screenshots of I1 to I6, J2, J6, J14 dialog and activation step 4 were read.
 - Sweep over the new and edited frames: no em dashes added, no unstyled text, no unbound fills except the existing sidebar icon paths. The one en dash found in J6 is the existing "Your total" placeholder.
+
+## Chat design process (gauntlet)
+
+Bar: replicate the owner's two chat reference screenshots (threads plus chat containers, docked chat panel) in the light iQLY theme with the official logomark and kit components. Two rounds with a blind critic. Round 1 found overlaps in the docked page, a clipped send button, a right-pointing send arrow and missing scope pill. Round 2 found a send button overflowing the panel composer, a 4px top-edge mismatch and an undifferentiated question bubble. All fixed; the loop stopped at two rounds. Lesson: frame screenshots are the evidence, and widths of auto-layout rows must be checked numerically when a clip is suspected.
