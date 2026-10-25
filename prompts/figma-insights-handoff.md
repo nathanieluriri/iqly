@@ -30,7 +30,8 @@ From the owner's 23 Oct comments:
      - I3 `2132:72090` Breakdown tab: bird's-eye view by place, age band, gender, new to Orchid vs used before. All groups foot to 41 entries. Scored-only and compare-groups chips.
      - I4 `2133:71738` Highlights tab: sentiment segments (All 14, Positive 9, Negative 3, Neutral 2), quote cards with tags, Export highlights button.
      - I5 `2133:72113` Tags tab: intelligent tags (iQLY suggested vs yours), quick search, matching entries as EntryCard instances.
-     - I6 `2133:72523` Ask tab: chat about the challenge data, cited sources, scope card, suggested questions.
+     - I6 `2133:72523` Ask tab, empty state: centered iQLY mark, greeting, three suggested questions and a large composer (Ask and Attach chips, scope pill, Send). Layout follows the owner's chat reference screenshots.
+     - I7 `2141:72531` Ask tab with an answer: question bubble, cited answer, suggestions, scope card. Not yet restyled to match I6.
    - Shared header on I2 to I6: breadcrumb, title, StatusPill, filter chips (Place, Age band, Gender, Poll answer), tabs Summary, Breakdown, Highlights, Tags, Ask. Tabs are cloned from J13 (active tab has a 2px bottom stroke in Color/fg).
 2. **Judging section** (`1693:76766`):
    - J2 `1385:45580`: single judge (judge list removed), Shortlisted and Not shortlisted groups, an Auto-score button in the toolbar, "Open insights" button in the head. Summary and trends now live in Insights.
@@ -64,6 +65,7 @@ All threads are left unresolved for the owner to resolve after review.
 ## Open items and decisions for the owner
 
 - Is the Summary a paid feature? Tentative summary before winners and final summary after are shown for every challenge. Gating (Pro vs Free) is undecided.
+- The Attach control is a FilterChip, so it shows a chevron. Use a plain attach button when one exists.
 - Mobile Insights is not designed. Desktop 1440 only.
 - Insights overview rows for polls and activations show only their own counts. Their detail pages are not designed.
 - Auto-score: the real scoring rules, a badge component for auto-scored marks and the error state are not designed.
